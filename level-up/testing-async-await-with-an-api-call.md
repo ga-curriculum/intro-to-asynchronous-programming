@@ -20,8 +20,12 @@ Add the following code to `app.js`:
 
 ```javascript
 async function show(todoId) {
-  const response = fetch(`${todosAPIUrl}${todoId}`);
-  console.log(response);
+  try {
+    const response = fetch(`${todosAPIUrl}${todoId}`);
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 console.log("First");
@@ -64,8 +68,12 @@ Let's update the function with the `await` operator:
 
 ```javascript
 async function show(todoId) {
-  const response = await fetch(`${todosAPIUrl}${todoId}`);
-  console.log(response);
+  try {
+    const response = await fetch(`${todosAPIUrl}${todoId}`);
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
 };
 ```
 
@@ -88,9 +96,13 @@ To access the JSON data, we can use the [*`json()`*](https://developer.mozilla.o
 Let's modify our code to utilize the `json()` method:
 ```javascript
 async function show(todoId) {
-  const response = await fetch(`${todosAPIUrl}${todoId}`);
-  const data = await response.json();
-  console.log(data);
+  try {
+    const response = await fetch(`${todosAPIUrl}${todoId}`);
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
 };
 ```
 
