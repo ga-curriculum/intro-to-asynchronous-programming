@@ -5,8 +5,6 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 
 ## Prerequisites
 - tktk
-- tktk
-- tktk
 
 ## Content
 
