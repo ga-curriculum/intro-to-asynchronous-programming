@@ -20,12 +20,8 @@ Add the following code to `app.js`:
 
 ```javascript
 async function show(todoId) {
-  try {
-    const response = fetch(`${todosAPIUrl}${todoId}`);
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  };
+  const response = fetch(`${todosAPIUrl}${todoId}`);
+  console.log(response);
 };
 
 console.log("First");
@@ -68,18 +64,14 @@ Let's update the function with the `await` operator:
 
 ```javascript
 async function show(todoId) {
-  try {
-    const response = await fetch(`${todosAPIUrl}${todoId}`);
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  };
+  const response = await fetch(`${todosAPIUrl}${todoId}`);
+  console.log(response);
 };
 ```
 
 Try running our updated code. Now, the `await` keyword tells JavaScript to pause execution at this point, and wait for the `Promise` to resolve. The response variable then holds the actual response from the API, not just a `Promise`.
 
->💡 After running the code, notice the order of the statements now being printed to your console. 
+>💡 After running the code, notice the order of the statements now being printed to your console.
 >
 
 ## Extracting data with the `json()` method
@@ -96,13 +88,9 @@ To access the JSON data, we can use the [*`json()`*](https://developer.mozilla.o
 Let's modify our code to utilize the `json()` method:
 ```javascript
 async function show(todoId) {
-  try {
-    const response = await fetch(`${todosAPIUrl}${todoId}`);
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  };
+  const response = await fetch(`${todosAPIUrl}${todoId}`);
+  const data = await response.json();
+  console.log(data);
 };
 ```
 
