@@ -21,7 +21,7 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 ## Level Up content
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [`setTimeout()`](./callbacks/README.md) | -- | -- | Implementing the `setTimeout` method |
+| [`setTimeout()`](./level-up/set-timeout.md) | -- | -- | Implementing the `setTimeout` method |
 | [Promises](./promises/README.md) | -- | -- |  Understanding the `Promise` object |
 | [`then()` and `catch()`](./level-up/then-and-catch.md) | -- | -- | Implementing `then()` and `catch()` in API calls |
 | [`Promise.all()`](./level-up/promise-all.md) | -- | -- | Using `Promise.all()` to handle multiple promises simultaneously. |

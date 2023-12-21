@@ -68,7 +68,6 @@ const example = async () => {
 }
 
 example();
-
 ```
 
 So much better than using callbacks!  A couple of things to note:
