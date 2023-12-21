@@ -15,22 +15,20 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 | [Setup](./setup/README.md) | -- | -- | Setting up the development environment |
 | [Concepts](./concepts/README.md) | -- | -- | Distinguish between synchronous and asynchronous programming in JavaScript  |
 | [Callbacks](./callbacks/README.md) | -- | -- | Understanding callback functions in relation to asynchronous JavaScript |
-| [Promises](./promises/README.md) | -- | -- |  Understanding the `Promise` object |
 | [Async/Await](./async-await/README.md) | -- | -- | Applying async/await syntax to asynchronous operations |
-| [Error handling with `try...catch`](./testing-async-await-with-an-api-call/README.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
-| [Intro to Fetch API](./fetch/README.md) | -- | -- | Understand the basics of the Fetch API in JavaScript |
-| [Testing Async/Await with an API Call](./testing-async-await-with-an-api-call/README.md) | -- | -- | Implement an API call in Javascript with `async/await` syntax |
-
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
 | [`setTimeout()`](./callbacks/README.md) | -- | -- | Implementing the `setTimeout` method |
+| [Promises](./promises/README.md) | -- | -- |  Understanding the `Promise` object |
 | [`then()` and `catch()`](./level-up/then-and-catch.md) | -- | -- | Implementing `then()` and `catch()` in API calls |
 | [`Promise.all()`](./level-up/promise-all.md) | -- | -- | Using `Promise.all()` to handle multiple promises simultaneously. |
+| [Error handling with `try...catch`](./testing-async-await-with-an-api-call/README.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
+| [Intro to Fetch API](./fetch/README.md) | -- | -- | Understand the basics of the Fetch API in JavaScript |
+| [Testing Async/Await with an API Call](./testing-async-await-with-an-api-call/README.md) | -- | -- | Implement an API call in Javascript with `async/await` syntax |
 | [Handing Errors `catch` Won’t Catch](./level-up/handing-errors-catch-won’t-catch.md) | -- | -- | Understanding the limitations of `try...catch` when making API calls |
-
 | **Total Level Up content**                                          | -- | -- |                     |
 
 ## References

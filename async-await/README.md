@@ -1,61 +1,76 @@
 # ![Intro to Asynchronous Programming - Async/Await](./assets/hero.png)
 
 **Learning objective:** By the end of this lesson, students will understand how to use the async/await syntax applies to asynchronous operations in JavaScript.
+## The problem with callbacks
 
+Developers will often times nest several callback functions when dealing with asynchronous code. However, when callbacks need to call functions that also accept callbacks, it leads to deeply nested structures. This is also known as "callback hell" or the "pyramid of doom". The resulting code becomes hard to read and debug, as illustrated by the pyramid-like structure in the following example.
+
+Let's create a second file, similar to the `test.txt` file we created before.  Put the following content in `test2.txt`:
+
+```
+hello 2!
+```
+
+Do something similar now with `test3.txt`:
+
+```
+hello 3!
+```
+
+Now let's update `example.js` to print the contents of both of these files, synchronously:
+
+```javascript
+const fs = require('node:fs');
+
+fs.readFile('test.txt', 'utf8', (err, data) => { 
+	console.log(data);
+	fs.readFile('test2.txt', 'utf8', (err2, data2) => { 
+		console.log(data2);
+		fs.readFile('test3.txt', 'utf8', (err3, data3) => { 
+			console.log(data3);
+		});
+	});
+});
+
+console.log('run this as soon a possible');
+```
+
+Ayyy!!! Can you see why this kind of structure has such negative names?  To avoid this pattern, ES6 introduced Async/Await
 ## What is Async/Await? 
 
-*Async/Await syntax* is an approach to handling operations that don't happen instantaneously, like fetching data from a database or an API. Async/Await syntax makes the handling of asynchronous operations more straightforward and readable. Async/Await is essentially "syntactic sugar" built on top of promises, in that it doesn't add new functionality but simplifies existing patterns.  
+*Async/Await syntax* is an approach to handling operations that don't happen instantaneously, like fetching data from a database or reading a file. Async/Await syntax makes the handling of asynchronous operations more straightforward and readable.  The only downside is that you need to learn two new JavaScript keywords.
 
 *`async`*
-When the `async` keyword is placed before a function declaration, it makes the function asynchronous, meaning the function will now return a promise that resolves into the actual value the function returns.
+When the `async` keyword is placed before a function declaration, it alerts javascript to the fact that there may be asynchronous operations that may need to run synchronously (i.e. line by line)
 
 *`await`*
-The `await` operator is used to pause the execution of code until a promise is resolved. The  `await` operator can only be used inside an `async` function.
+The `await` operator is used to pause the execution of code until an asynchronous operation has completed. The  `await` operator can only be used inside an `async` function.
 
 Check [**MDN - async and await**](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await) for more information on async and await. 
-
 ## Anatomy of an `async` function
 
-Let's take a moment to get a sense of how an `async` function is defined. Take a look at the hypothetical example below:
+Let's rewrite the previous file reading code using async/await:
 
 ```javascript
-async function index() {
-  const response = todoDB.find();
-  console.log(response);
-};
+const fs = require('node:fs/promises');
+
+const example = async () => {
+	console.log('run this as soon a possible');
+	const data = await fs.readFile('test.txt', { encoding: 'utf8' });
+	console.log(data);
+	const data2 = await fs.readFile('test2.txt', { encoding: 'utf8' });
+	console.log(data2);
+	const data3 = await fs.readFile('test3.txt', { encoding: 'utf8' });
+	console.log(data3);
+}
+
+example();
+
 ```
 
-Notice how this syntax is quite similar to standard function declarations. The key difference is the addition of the `async` keyword. In this example, the `find()` method of our `todoDB` will take time to complete its task. As a result, the operation will return a promise.
+So much better than using callbacks!  A couple of things to note:
 
-If we were to run this code, the `console.log()` would print out the following:
+- `const fs = require('node:fs/promises');` this is a slightly different NodeJS package that we're using which enables `async`/`await` syntax.
+- We define and then invoke an `async` function called `example` because the lines marked with `await` need to occur inside `async` functions and can't occur in global scope.
 
-```javascript
-Promise { <pending> }
-```
-
-The `response` variable holds a `pending` `Promise`. To access the actual data returned from the `find()` method, we need to use the `await` operator.
-
-## Using `await` in `async` functions
-
-The `await` operator allows us to pause the function execution until a promise resolves.
-
-Take a look at the updated code below:
-
-```javascript
-async function index() {
-  const response = await todoDB.find(); // Waits for the Promise to resolve
-  console.log(response);
-};
-```
-
-After adding the `await` operator, running this code would display the resolved promise, i.e., the actual data returned from `todoDB.find()`:
-
-```javascript
-[
-  { id: 1, task: 'Learn React', completed: false },
-  { id: 2, task: 'Learn Express', completed: false },
-  { id: 3, task: 'Build Tic-Tac-Toe', completed: false }
-]
-```
-
-Notice how the `await` keyword transforms the way we handle asynchronous operations. It waits for `todoDB.find()` to complete and then stores the resolved data in `response`. This makes our asynchronous code more readable and easier to follow.
+Once Node has entered the invocation of `example()`, the flow of control runs in an easily readable manner from one line to the next without any need for callbacks.  This is because we have added the `await` keyword in front of each `fs.readFile()` invocation.  In addition, the `await` keyword allows `fs.readFile` to return the contents of the file as a string, rather than pass it into a callback function as an argument.  This allows us to assign this information to the variable `data`.
