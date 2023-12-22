@@ -25,7 +25,7 @@ async function show(todoId) {
     console.log(response);
   } catch (error) {
     console.log(error);
-  };
+  }
 };
 
 console.log("First");
@@ -73,13 +73,13 @@ async function show(todoId) {
     console.log(response);
   } catch (error) {
     console.log(error);
-  };
+  }
 };
 ```
 
 Try running our updated code. Now, the `await` keyword tells JavaScript to pause execution at this point, and wait for the `Promise` to resolve. The response variable then holds the actual response from the API, not just a `Promise`.
 
->💡 After running the code, notice the order of the statements now being printed to your console. 
+>💡 After running the code, notice the order of the statements now being printed to your console.
 >
 
 ## Extracting data with the `json()` method
@@ -102,7 +102,7 @@ async function show(todoId) {
     console.log(data);
   } catch (error) {
     console.log(error);
-  };
+  }
 };
 ```
 

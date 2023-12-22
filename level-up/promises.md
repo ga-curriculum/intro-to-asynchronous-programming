@@ -4,7 +4,7 @@
 
 ## What is a Promise?
 
-A **promise** is a special JavaScript object. It represents the eventual completion, or failure, of an asynchronous operation. 
+A **promise** is a special JavaScript object. It represents the eventual completion, or failure, of an asynchronous operation.
 
 A *promise* is always in one of three states:
 
@@ -12,4 +12,4 @@ A *promise* is always in one of three states:
 - `fulfilled`: The async operation was completed successfully.
 - `rejected`: The async operation failed.
 
-Once a *promise* has been *settled*, i.e., it’s no longer *pending*, its state will not change again.
+Once a *promise* has been *settled*, i.e., it's either fulfilled or rejected, its state will not change again.

@@ -28,9 +28,11 @@ setTimeout((message) => {
 In the example above, the callback function defines a parameter named `message`. `setTimeout()` is given the string `'Hello World!'` as an optional argument. After the 2000-millisecond delay, this string is passed to the callback function, resulting in `'Hello World!'` being logged to the console.
 
 ## Understanding the asynchronous nature of `setTimeout()`
+
 By default, JavaScript operates in a synchronous manner, meaning code is executed sequentially. This means each line must complete its task before the next line begins execution.
 
 For instance, in the following synchronous code, each `console.log` statement prints out in the order they are written:
+
 ```javascript
 console.log("First");
 console.log("Second");

@@ -4,11 +4,11 @@
 
 ## Callbacks in asynchronous JavaScript
 
-A callback is a function passed into another function as an argument, so that it may be invoked at the appropriate time. Many JavaScript functions are designed to use callbacks, including browser event handling, and asynchronous requests like reading files.
+A callback is a function passed into another function as an argument, so that it may be invoked at the appropriate time. Many JavaScript functions are designed to use callbacks, including browser event handling and asynchronous requests like reading files.
 
 As an example, create a file `test.txt` with the following contents:
 
-```
+```plaintext
 hello!
 ```
 
@@ -26,11 +26,11 @@ console.log('run this as soon a possible');
 
 Run the code with:
 
-```
+```bash
 node example.js
 ```
 
-Reading a file takes a relatively long time for computers to do, even if it's a fraction of a second for us.  We're trying to run the line `console.log('run this as soon a possible')` as quickly as the program can, but if we were to wait for the reading of the file to finish, it could take a while (at least for a computer).  Instead what we do is have the process of reading a file run asynchronously and then move onto the line `console.log('run this as soon a possible')` while the file operation runs.  Once the reading of the file is complete, we'll log the contents of the file with `console.log(data);`.  If you were to run this code, you would see the text "run this as soon a possible" first, followed by the contents of test.txt: hello!
+Reading a file takes a relatively long time for computers to do, even if it's a fraction of a second for us. We're trying to run the line `console.log('run this as soon a possible')` as quickly as the program can, but if we were to wait for the reading of the`test.txt` file to finish, it could take a while (at least for a computer). Instead, what we can do is have the process of reading the file run asynchronously, which frees us up to move on to the line `console.log('run this as soon a possible')` while the file operation runs. Once the reading of the file is complete, we'll log the contents of the file with `console.log(data);`. If you were to run this code, you would see the text "run this as soon a possible" first, followed by the contents of test.txt: hello!
 
 tktk: Hunter perhaps a diagram again like below, but showing the above example.  The left panel waits for the file read, followed by `console.log('run this as soon a possible');`, and the right panel shows them running in parallel:
 
@@ -44,4 +44,4 @@ fs.readFile('test.txt', 'utf8', (err, data) => {
 });
 ```
 
-Here, we pass an anonymous function definition into `fs.readFile` as the third argument (the first argument is the name of the file, and the second is the [character set](https://en.wikipedia.org/wiki/UTF-8)).  Once `fs.readFile` has completed reading the file `test.txt`, it will execute this anonymous callback function.
+Here, we pass an anonymous function definition into `fs.readFile` as the third argument (the first argument is the name of the file, and the second is the [character set](https://en.wikipedia.org/wiki/UTF-8)). Once `fs.readFile` has completed reading the file `test.txt`, it will execute this anonymous callback function.

@@ -1,6 +1,6 @@
 # ![Intro to Asynchronous Programming - Setup](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to create HTML and CSS files with starter code for this module's lecture.
+## Setup
 
 Open your Terminal application and navigate to your **`~/code/ga/lectures`** directory:
 
@@ -21,7 +21,7 @@ Then, create an **`app.js`** and an **`index.html`** file. These files will hold
 touch app.js index.html
 ```
 
-With the files created, open the contents of the directory in VS Code:
+With the files created, open the contents of the directory in VSCode:
 
 ```bash
 code .
@@ -38,8 +38,8 @@ With this setup complete, we'll have two methods at our disposal for executing t
 - Open the **`index.html`** file in your browser and access the console output in your browser's dev tools.
 - Use `node` to execute the **`app.js`** file directly by using this command in your terminal:
   
-  ```bash
-  node app.js
-  ```
+```bash
+node app.js
+```
 
 While either method is acceptable, you should use the same method as your instructor for simplicity.

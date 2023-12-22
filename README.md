@@ -5,8 +5,6 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 
 ## Prerequisites
 - tktk
-- tktk
-- tktk
 
 ## Content
 
@@ -21,13 +19,13 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 ## Level Up content
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [`setTimeout()`](./callbacks/README.md) | -- | -- | Implementing the `setTimeout` method |
-| [Promises](./promises/README.md) | -- | -- |  Understanding the `Promise` object |
+| [`setTimeout()`](./level-up/set-timeout.md) | -- | -- | Implementing the `setTimeout` method |
+| [Promises](./level-up/promises.md) | -- | -- |  Understanding the `Promise` object |
 | [`then()` and `catch()`](./level-up/then-and-catch.md) | -- | -- | Implementing `then()` and `catch()` in API calls |
 | [`Promise.all()`](./level-up/promise-all.md) | -- | -- | Using `Promise.all()` to handle multiple promises simultaneously. |
-| [Error handling with `try...catch`](./testing-async-await-with-an-api-call/README.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
-| [Intro to Fetch API](./fetch/README.md) | -- | -- | Understand the basics of the Fetch API in JavaScript |
-| [Testing Async/Await with an API Call](./testing-async-await-with-an-api-call/README.md) | -- | -- | Implement an API call in Javascript with `async/await` syntax |
+| [Error handling with `try...catch`](./level-up/error-handling-with-try-catch.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
+| [Intro to Fetch API](./level-up/fetch.md) | -- | -- | Understand the basics of the Fetch API in JavaScript |
+| [Testing Async/Await with an API Call](./level-up/testing-async-await-with-an-api-call.md) | -- | -- | Implement an API call in Javascript with `async/await` syntax |
 | [Handing Errors `catch` Won’t Catch](./level-up/handing-errors-catch-won’t-catch.md) | -- | -- | Understanding the limitations of `try...catch` when making API calls |
 | **Total Level Up content**                                          | -- | -- |                     |
 
@@ -35,13 +33,6 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 
 📖 [Reference Materials](./references/README.md)
 
-## Deployed sites
-
-tktk If there is not a deployed site related to this module this section and all of its content should be removed.
-
-🌐 [Live site](#tktk-deployed-app-url)
-
-🐙 [Repository](#tktk-repository-for-deployed-app)
 
 ## Internal resources
 
