@@ -3,6 +3,7 @@
 **Learning objective:** By the end of this lesson, students will understand how to use `try...catch` blocks in JavaScript to handle errors in code effectively.
 
 ## What is a `try...catch` statement?
+
 The try/catch statement provides a way to handle errors that may occur in a block of code, without stopping the execution of the entire script. 
 
 **`try`**
@@ -16,6 +17,7 @@ The try/catch statement provides a way to handle errors that may occur in a bloc
 Visit [MDN - try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) for more information on try and catch.
 
 ## Anatomy of a `try...catch`
+
 Let's take a moment to get a sense of how to structure a `try...catch` block.
 
 ```javascript
@@ -29,6 +31,7 @@ try {
 In this structure, the `try` block can contain any code that might throw an `error` when executing. When an `error` is thrown in the `try` block, it is caught and handled by the `catch` block, allowing an application to continue running.
 
 ## Using `try...catch` in asynchronous functions
+
 When it comes to asynchronous functions, `try...catch` can be incredibly useful for handling errors that stem from database queries or API calls. Take a look at the example below:
 
 ```javascript

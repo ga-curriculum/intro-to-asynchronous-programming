@@ -3,12 +3,15 @@
 **Learning objective:** By the end of this lesson, students will understand how to use `Promise.all()` to handle multiple promises simultaneously.
 
 ## What is `Promise.all()`?
+
 `Promise.all()` is a feature in JavaScript for handling multiple promises *at the same time*. It accepts an array of promises, and returns a single promise that resolves when all of the promises in the array have completed.
 
 ## Why use `Promise.all()`?
+
 Imagine you have multiple API calls to make and you need all the results to proceed. Instead of waiting for each call to complete one after the other, you can use `Promise.all()` to make these calls in parallel. If any promise is rejected, `Promise.all()` immediately returns an error.
 
 ## Making API calls with `Promise.all()`
+
 Let's get some practice implementing `Promise.all()`. First, let's add two new endpoints to our code:
 
 ```javascript
@@ -20,6 +23,7 @@ const userAPIUrl = 'https://jsonplaceholder.typicode.com/users/1'
 ```
 
 Next, define and call upon a function called `fetchMultiple` like the example below:
+
 ```javascript
 async function fetchMultiple() {
   try {
@@ -65,6 +69,7 @@ fetchMultiple()
 ```
 
 If we run our code, we should see something like the following print to our console:
+
 ```javascript
 [
   {

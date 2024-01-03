@@ -5,6 +5,7 @@
 In JavaScript, `then()` and `catch()` are methods used to handle asynchronous operations. They provide functionality similar to what you can achieve with `async/await` and `try...catch` blocks. In short, `then()` is used for handling the fulfillment of a promise, while `catch()` is used for handling the errors.
 
 ## `then()`
+
 The `then()` method chains to the end of an asynchronous operation, like a `fetch` request. It accepts a callback function that is executed when the asynchronous operation completes. The callback function passed to the `then()` accepts the result of the promise as its input.
 
 ```javascript
@@ -20,6 +21,7 @@ In the code block above, we are chaining together two instances of the `then()` 
 - Second callback: The second instance of `then()` waits for the `Promise` returned by `res.json()` to be resolved. It then executes its callback `(data) => console.log(data)`, which receives the data and logs it to the console.
 
 ## `catch()`
+
 The `catch()` method can be chained to the end of a `then()`. It accepts a callback function as an argument. This callback function is executed if an error occurs at any point in the chain, and receives the error as an argument.
 
 ```javascript

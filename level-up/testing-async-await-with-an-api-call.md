@@ -16,6 +16,7 @@ const todosAPIUrl = 'https://jsonplaceholder.typicode.com/todos/'
 In the next step, we'll create a function to make a `GET` request to this endpoint, with the goal of accessing the `todos` resource.
 
 ## Defining a fetch function
+
 Add the following code to `app.js`:
 
 ```javascript
@@ -49,6 +50,7 @@ Finally, we are calling upon the `show` function and passing an argument of `1`.
 >
 
 ## Pending promises
+
 When we run our code, notice what we are getting as a `response`:
 
 ```plaintext
@@ -62,6 +64,7 @@ Logging the `response` gives us an unresolved `Promise` object. This happens bec
 To view the actual information contained in the `response`, we'll need to modify our code with the `await` operator.
 
 ## Awaiting promises
+
 We have already declared our function as asynchronous with the `async` keyword, so the only change we need to make is adding the `await` operator before the invocation of `fetch`.
 
 Let's update the function with the `await` operator:
@@ -83,6 +86,7 @@ Try running our updated code. Now, the `await` keyword tells JavaScript to pause
 >
 
 ## Extracting data with the `json()` method
+
 Although we successfully `await` the response from the API, the `response` does not directly contain the data we need. At the moment, we are viewing an HTTP response, not the actual [*JSON data*](https://developer.mozilla.org/en-US/docs/Glossary/JSON). 
 
 >📚 JSON, short for JavaScript Object Notation, is a format for storing and transporting data. It's often used when in API calls and closely resembles a JavaScript object.
@@ -94,6 +98,7 @@ To access the JSON data, we can use the [*`json()`*](https://developer.mozilla.o
 > 
 
 Let's modify our code to utilize the `json()` method:
+
 ```javascript
 async function show(todoId) {
   try {
@@ -107,6 +112,7 @@ async function show(todoId) {
 ```
 
 Now when we run our code, our console should display something like the `data` object below:
+
 ```plaintext
 { userId: 1, id: 1, title: 'delectus aut autem', completed: false }
 ```

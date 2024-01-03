@@ -3,6 +3,7 @@
 **Learning Objective:** By the end of this lesson, students will understand the basics of the Fetch API in JavaScript.
 
 ## What is the Fetch API?
+
 The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is a tool for making network requests in JavaScript. It facilitates communication between an application and a server, allowing the application to either send or receive data. Think of it as a messenger that can move data between your application and other places on the internet. 
 
 The primary function provided by the Fetch API is the [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/fetch) method. It is used to make network requests. The `fetch()` method accepts a URL as an argument, and returns a Promise that resolves to a response. The `fetch()` method also accepts an optional options object that can be used to specify the HTTP method of the request. If no HTTP method is specified, the default GET request is used.
@@ -24,10 +25,11 @@ async function fetchData(url) {
 - Finally, the fetched data is logged to the console.
 
 
-> 📚  The `.json()` method in JavaScript is used to convert a response from a network request into a JavaScript object. It's typically applied to the response object returned by the Fetch API to handle JSON data sent from the server.
+> 📚 The `.json()` method in JavaScript is used to convert a response from a network request into a JavaScript object. It's typically applied to the response object returned by the Fetch API to handle JSON data sent from the server.
 > 
 
 ## The options object
+
 The [options object](https://developer.mozilla.org/en-US/docs/Web/API/fetch#options) allows you to apply various settings to a request made with the fetch method. Some of the most common properties for the options object include:
 
 - [`method`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#method)
