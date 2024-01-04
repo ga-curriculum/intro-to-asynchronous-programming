@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - Promises](./assets/hero.png)
+# ![Intro to Asynchronous Programming - Promises](./assets/promises.png)
 
 **Learning objective:** By the end of this lesson, students will be able to understand and use JavaScript promises for managing asynchronous operations.
 

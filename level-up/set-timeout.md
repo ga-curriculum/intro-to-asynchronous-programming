@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - `setTimeout`](./assets/hero.png)
+# ![Intro to Asynchronous Programming - `setTimeout`](./assets/set-timeout.png)
 
 **Learning objective:** By the end of this lesson, students will be able to utilize the `setTimeout()` method in JavaScript.
 

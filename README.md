@@ -24,7 +24,7 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 | [`then()` and `catch()`](./level-up/then-and-catch.md) | -- | -- | Implementing `then()` and `catch()` in API calls |
 | [`Promise.all()`](./level-up/promise-all.md) | -- | -- | Using `Promise.all()` to handle multiple promises simultaneously. |
 | [Error handling with `try...catch`](./level-up/error-handling-with-try-catch.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
-| [Intro to Fetch API](./level-up/fetch.md) | -- | -- | Understand the basics of the Fetch API in JavaScript |
+| [Intro to the Fetch API](./level-up/intro-to-the-fetch-api.md) | -- | -- | Understand the basics of the Fetch API in JavaScript |
 | [Testing Async/Await with an API Call](./level-up/testing-async-await-with-an-api-call.md) | -- | -- | Implement an API call in Javascript with `async/await` syntax |
 | [Handing Errors `catch` Won’t Catch](./level-up/handing-errors-catch-won’t-catch.md) | -- | -- | Understanding the limitations of `try...catch` when making API calls |
 | **Total Level Up content**                                          | -- | -- |                     |

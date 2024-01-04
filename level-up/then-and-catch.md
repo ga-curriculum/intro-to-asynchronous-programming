@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - Level Up - `then()` and `catch()`](./assets/hero.png)
+# ![Intro to Asynchronous Programming - Level Up - `then()` and `catch()`](./assets/then-and-catch.png)
 
 **Learning objective:** By the end of this lesson, students will understand how to apply `then()` and `catch()` to asynchronous operations.
 

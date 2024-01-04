@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - Level Up - Handing Errors `catch` Won’t Catch](./assets/hero.png)
+# ![Intro to Asynchronous Programming - Level Up - Handing Errors `catch` Won’t Catch](./assets/handling-errors-catch-wont-catch.png)
 
 **Learning objective:** By the end of this lesson, students will understand how the limitations of `try...catch` when making API calls, and ways to add custom error handling.
 

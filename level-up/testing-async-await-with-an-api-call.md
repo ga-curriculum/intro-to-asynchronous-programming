@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - Testing `async/await` with an API call](./assets/hero.png)
+# ![Intro to Asynchronous Programming - Testing `async/await` with an API call](./assets/testing-async-await-with-an-api-call.png)
 
 **Learning objective:** By the end of this lesson, students will be able to make fetch requests using `async/await` syntax.
 

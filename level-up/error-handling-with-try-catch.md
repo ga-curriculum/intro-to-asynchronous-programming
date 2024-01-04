@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - Error handling with `try...catch`](./assets/hero.png)
+# ![Intro to Asynchronous Programming - Error handling with `try...catch`](./assets/error-handling-with-try-catch.png)
 
 **Learning objective:** By the end of this lesson, students will understand how to use `try...catch` blocks in JavaScript to handle errors in code effectively.
 

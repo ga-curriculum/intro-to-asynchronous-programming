@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - Level Up - `Promise.all()`](./assets/hero.png)
+# ![Intro to Asynchronous Programming - Level Up - `Promise.all()`](./assets/promise-all.png)
 
 **Learning objective:** By the end of this lesson, students will understand how to use `Promise.all()` to handle multiple promises simultaneously.
 
