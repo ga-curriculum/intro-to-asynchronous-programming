@@ -25,7 +25,6 @@ const fetchData = async (url) => {
 - Finally, the fetched data is logged to the console.
 
 > 📚 The `.json()` method in JavaScript is used to convert a response from a network request into a JavaScript object. It's typically applied to the response object returned by the Fetch API to handle JSON data sent from the server.
-> 
 
 ## The options object
 
@@ -40,7 +39,7 @@ The `method` property is used to specify the HTTP method (`GET`, `POST`, `PUT`, 
 
 -  [`headers`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#headers)
 
-The `headers` property is used to set *HTTP headers* for the request. HTTP headers can be used to include additional information about the request, such as the type of data being submitted.
+    The `headers` property is used to set *HTTP headers* for the request. HTTP headers can be used to include additional information about the request, such as the type of data being submitted.
 
     ```javascript
     fetch(url, { headers: { 'Content-Type': 'application/json' }})
@@ -48,7 +47,7 @@ The `headers` property is used to set *HTTP headers* for the request. HTTP heade
 
 -  [`body`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#body)
 
-The `body` property can be used to include any data, like information entered into a form, along with the request. 
+    The `body` property can be used to include any data, like information entered into a form, along with the request. 
 
     ```javascript
     fetch(url, { 
@@ -57,11 +56,11 @@ The `body` property can be used to include any data, like information entered in
     })
     ```
 
-    💡 In the example above, the [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method is used to convert the JavaScript object into a `JSON` string.
+    > 💡 In the example above, the [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method is used to convert the JavaScript object into a `JSON` string.
 
 - [`mode`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#mode)
 
-Specifies the mode of the request, such as `cors`, `no-cors`, or `same-origin`. It's important for handling [cross-origin requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+  Specifies the mode of the request, such as `cors`, `no-cors`, or `same-origin`. It's important for handling [cross-origin requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
-    > 📚  Cross-origin requests happen when a website tries to access resources from an outside source on the web. Normally, browsers block these requests for security reasons, but they can be conducted safely using the CORS (Cross-Origin Resource Sharing) mechanism. 
-    > 
+  > 📚  Cross-origin requests happen when a website tries to access resources from an outside source on the web. Normally, browsers block these requests for security reasons, but they can be conducted safely using the CORS (Cross-Origin Resource Sharing) mechanism. 
+
