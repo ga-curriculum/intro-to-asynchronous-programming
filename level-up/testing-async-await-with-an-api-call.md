@@ -20,7 +20,7 @@ In the next step, we'll create a function to make a `GET` request to this endpoi
 Add the following code to `app.js`:
 
 ```javascript
-async function show(todoId) {
+const show = async (todoId) => {
   try {
     const response = fetch(`${todosAPIUrl}${todoId}`);
     console.log(response);
@@ -70,7 +70,7 @@ We have already declared our function as asynchronous with the `async` keyword, 
 Let's update the function with the `await` operator:
 
 ```javascript
-async function show(todoId) {
+const show = async (todoId) => {
   try {
     const response = await fetch(`${todosAPIUrl}${todoId}`);
     console.log(response);
@@ -100,7 +100,7 @@ To access the JSON data, we can use the [*`json()`*](https://developer.mozilla.o
 Let's modify our code to utilize the `json()` method:
 
 ```javascript
-async function show(todoId) {
+const show = async (todoId) => {
   try {
     const response = await fetch(`${todosAPIUrl}${todoId}`);
     const data = await response.json();

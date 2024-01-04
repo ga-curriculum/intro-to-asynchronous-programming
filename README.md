@@ -33,7 +33,6 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 
 📖 [Reference Materials](./references/README.md)
 
-
 ## Internal resources
 
 ✏️ [Instructor Guide](./internal-resources/instructor-guide.md)

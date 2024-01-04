@@ -7,10 +7,12 @@
 The try/catch statement provides a way to handle errors that may occur in a block of code, without stopping the execution of the entire script. 
 
 **`try`**
+
 - The `try` block is where you write the code that might throw an `error`. Think of it as a way of saying, "Attempt this operation, but know that it might fail."
 - If any code within the `try` block throws an `error`, the execution immediately jumps to the `catch` block.
 
 **`catch`**
+
 - The `catch` block is executed if an error is thrown within the try block.
 - It receives an `error` object that contains details about what went wrong, allowing you to handle the `error`, log it, or provide alternative logic.
 
@@ -35,7 +37,7 @@ In this structure, the `try` block can contain any code that might throw an `err
 When it comes to asynchronous functions, `try...catch` can be incredibly useful for handling errors that stem from database queries or API calls. Take a look at the example below:
 
 ```javascript
-async function index() {
+const index = async () => {
   try {
     const response = await todoDB.find();
     console.log(response);

@@ -25,7 +25,7 @@ const userAPIUrl = 'https://jsonplaceholder.typicode.com/users/1'
 Next, define and call upon a function called `fetchMultiple` like the example below:
 
 ```javascript
-async function fetchMultiple() {
+const fetchMultiple = async () => {
   try {
     const promise1 = fetch(postsAPIUrl);
     const promise2 = fetch(userAPIUrl);
@@ -48,7 +48,7 @@ How might we use `Promise.all()` to extract the data from our array of responses
 Let's modify our code with the following:
 
 ```javascript
-async function fetchMultiple() {
+const fetchMultiple = async () => {
   try {
 
     const promise1 = fetch(postsAPIUrl);

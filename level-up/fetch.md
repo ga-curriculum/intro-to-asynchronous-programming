@@ -13,7 +13,7 @@ The primary function provided by the Fetch API is the [`fetch()`](https://develo
 Let's take a look at how a fetch request is constructed:
 
 ```javascript
-async function fetchData(url) {
+const fetchData = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
 }
@@ -23,7 +23,6 @@ async function fetchData(url) {
 - Inside the function, we use `fetch` to make a GET request to the specified URL. Since `fetch` is asynchronous, we use `await` to pause the execution until the request completes and returns a response.
 - Next, the response is converted into a JavaScript object using the [`json()`](https://developer.mozilla.org/en-US/docs/Web/API/Response/json) method. This step is also asynchronous, so once again we use the `await` operator.
 - Finally, the fetched data is logged to the console.
-
 
 > 📚 The `.json()` method in JavaScript is used to convert a response from a network request into a JavaScript object. It's typically applied to the response object returned by the Fetch API to handle JSON data sent from the server.
 > 

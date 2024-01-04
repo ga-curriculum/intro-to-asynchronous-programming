@@ -16,7 +16,7 @@ Using `try...catch` with API calls has certain limitations. Oftentimes when maki
 Let's get some practice with error handling in fetch requests. Update your code as shown in the example below:
 
 ```javascript
-async function show(todoId) {
+const show = async (todoId) => {
   try {
     const response = await fetch(`${todosAPIUrl}${todoId}`);
     if (!response.ok) {
