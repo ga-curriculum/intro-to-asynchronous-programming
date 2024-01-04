@@ -24,6 +24,7 @@ Now let's update `app.js` to print the contents of both of these files, synchron
 
 ```javascript
 // app.js
+
 const fs = require('node:fs');
 
 fs.readFile('test.txt', 'utf8', (err, data) => {
@@ -71,16 +72,18 @@ Notice how this syntax is quite similar to standard functions. The key differenc
 Let's rewrite the previous file reading code using async/await:
 
 ```javascript
+// app.js
+
 const fs = require('node:fs/promises');
 
 const example = async () => {
-	console.log('run this as soon a possible');
-	const data = await fs.readFile('test.txt', 'utf8');
-	console.log(data);
-	const data2 = await fs.readFile('test2.txt', 'utf8');
-	console.log(data2);
-	const data3 = await fs.readFile('test3.txt', 'utf8');
-	console.log(data3);
+  console.log('run this as soon a possible');
+  const data = await fs.readFile('test.txt', 'utf8');
+  console.log(data);
+  const data2 = await fs.readFile('test2.txt', 'utf8');
+  console.log(data2);
+  const data3 = await fs.readFile('test3.txt', 'utf8');
+  console.log(data3);
 }
 
 example();
