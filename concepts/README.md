@@ -10,10 +10,9 @@ By default, JavaScript operates in a synchronous manner, where code is executed 
 
 Asynchronous programming allows for the initiation of a task that will complete sometime in the future, while the rest of the code continues to run. An asynchronous operation allows the program to handle other tasks, and then come back to the original task once it is ready.
 
-> 📚  In programming, asynchronous refers to operations or events that don't occur in sequential order.
-> 
+![Asynchronous and Synchronous Programming](./assets/sync-vs-async.png)
 
-tktk: Hunter, what do you think about an image here?  Maybe something like this: ![](https://2327111203-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LA-UVvJIdbk5Kfk3bDs%2F-M4zU72YWwW2hSyXI5LY%2F-M4zVQZMwwMDTDL3Tzd9%2Fasync-programming.png?alt=media&token=7dfdb955-c7bb-4765-a137-89a099e5f411)
+> 📚  In programming, asynchronous refers to operations or events that don't occur in sequential order.
 
 ## Why do we use asynchronous programming?
 
@@ -30,4 +29,3 @@ This kind of feature is called *infinite scroll*, and it's just one of many exam
 Many essential tools and operations in JavaScript are designed to function asynchronously - operations like reading files or database queries being prime examples. Understanding how to work with asynchronous code will enable you to integrate these functionalities in your applications.
 
 >💡 Understanding asynchronous programming is crucial in JavaScript, especially for operations like server requests, file reading, or any other task that takes time to complete. 
->
