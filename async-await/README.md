@@ -6,7 +6,9 @@
 
 Developers will often times nest several callback functions when dealing with asynchronous code. However, when callbacks need to call functions that also accept callbacks, it leads to deeply nested structures. This is also known as "callback hell" or the "pyramid of doom". The resulting code becomes hard to read and debug, as illustrated by the pyramid-like structure in the following example.
 
-To set up the example, let's create a second file, similar to the `test.txt` file we created before. Put the following content in `test2.txt`:
+To set up the example, let's create a second file, similar to the `test.txt` file we created before. 
+
+Put the following content in `test2.txt`:
 
 ```
 hello 2!
@@ -18,9 +20,10 @@ Repeat the process again, with a `test3.txt` file:
 hello 3!
 ```
 
-Now let's update `example.js` to print the contents of both of these files, synchronously:
+Now let's update `app.js` to print the contents of both of these files, synchronously:
 
 ```javascript
+// app.js
 const fs = require('node:fs');
 
 fs.readFile('test.txt', 'utf8', (err, data) => { 
@@ -52,6 +55,19 @@ Check [**MDN - async and await**](https://developer.mozilla.org/en-US/docs/Learn
 
 ## Anatomy of an `async` function
 
+Let's take a moment to get a sense of how an `async` function is defined. Take a look at the hypothetical example below:
+
+```javascript
+const index = async () => {
+  const response = await todoDB.find();
+  console.log(response);
+};
+```
+
+Notice how this syntax is quite similar to standard functions. The key difference is the addition of the `async` keyword. By making the function asynchronous, we can make use of the `await` operator inside the function. This pauses the execution of code inside the function until the asynchronous `todoDB.find()` operation is complete.
+
+## Implementing Async/Await syntax
+
 Let's rewrite the previous file reading code using async/await:
 
 ```javascript
@@ -70,9 +86,10 @@ const example = async () => {
 example();
 ```
 
-So much better than using callbacks!  A couple of things to note:
+So much better than using callbacks!
 
-- `const fs = require('node:fs/promises');` this is a slightly different NodeJS package that we're using which enables `async`/`await` syntax.
-- We define and then invoke an `async` function called `example` because the lines marked with `await` need to occur inside `async` functions and can't occur in global scope.
+We have defined and invoked an `async` function called `example` because the lines marked with `await` need to occur inside `async` functions and can't occur in global scope.
 
 Once Node has entered the invocation of `example()`, the flow of control runs in an easily readable manner from one line to the next without any need for callbacks. This is because we have added the `await` keyword in front of each `fs.readFile()` invocation. In addition, the `await` keyword allows `fs.readFile` to return the contents of the file as a string, rather than pass it into a callback function as an argument.nThis allows us to assign this information to the variable `data`.
+
+> 📚 `const fs = require('node:fs/promises');` is a slightly different NodeJS package for interactions with the file system that enables `async`/`await` syntax.
