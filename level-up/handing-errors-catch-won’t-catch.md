@@ -1,4 +1,4 @@
-# ![Intro to Asynchronous Programming - Level Up - Handing Errors `catch` Won’t Catch](./assets/hero.png)
+# ![Intro to Asynchronous Programming - Level Up - Handing Errors `catch` Won’t Catch](./assets/handling-errors-catch-wont-catch.png)
 
 **Learning objective:** By the end of this lesson, students will understand how the limitations of `try...catch` when making API calls, and ways to add custom error handling.
 
@@ -12,9 +12,11 @@ Using `try...catch` with API calls has certain limitations. Oftentimes when maki
 >
 
 ## Error handling in fetch requests
+
 Let's get some practice with error handling in fetch requests. Update your code as shown in the example below:
+
 ```javascript
-async function show(todoId) {
+const show = async (todoId) => {
   try {
     const response = await fetch(`${todosAPIUrl}${todoId}`);
     if (!response.ok) {
@@ -33,11 +35,13 @@ show(1000);
 In the example above, we are now using an `if` condition to check the `ok` property of our `response`. If there is an issue with the `response`, the `ok` property will have a value of `false`, and our code will [`throw`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw) a new [`Error`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) object. 
 
 Now when we run our code, we should see the following in our console:
+
 ```plaintext
 Error: HTTP Status: 404
 ```
 
 ## Custom error messages
+
 In the above code, notice how we are passing a custom error message to the *`Error`* constructor. The message includes the `status` of our `response`. The *`throw`* operator causes our code to exit the `try` block, and move to the `catch` block. In this scenario, we are forcing a `404` (meaning the resource could not be located) error by passing a nonexistent `todoId` to the `show` function. This will allow us to test our our error handling.
 
 > 📚 The `Error` constructor creates an error object for debugging purposes. The `throw` operator is used to trigger that error.

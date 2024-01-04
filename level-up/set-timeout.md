@@ -1,11 +1,13 @@
-# ![Intro to Asynchronous Programming - `setTimeout`](./assets/hero.png)
+# ![Intro to Asynchronous Programming - `setTimeout`](./assets/set-timeout.png)
 
 **Learning objective:** By the end of this lesson, students will be able to utilize the `setTimeout()` method in JavaScript.
 
 ## What is the `setTimeout()` method?
+
 A great example of asynchronous code in JavaScript is the global [`setTimeout()`](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) method. The `setTimeout()` method is designed to create a timer that runs a block of code when the timer runs out. The `setTimeout()` method is asynchronous, in that it breaks from the ordered execution of code, and does not block the execution of later lines of code.
 
 ### Anatomy of `setTimeout()`
+
 Calling upon the `setTimeout()` method requires the following two arguments:
 
 ```javascript
@@ -17,6 +19,7 @@ setTimeout(callback, delay);
 2. `delay` - This specifies the time to wait before executing the `callback`, measured in milliseconds. For example, a delay of 1000 milliseconds equates to 1 second.
 
 ### Optional arguments
+
 The `setTimeout()` method can also accept a series of optional arguments. These arguments are passed to the `callback` when it is executed.
 
 ```javascript
@@ -40,6 +43,7 @@ console.log("Third");
 ```
 
 However, introducing `setTimeout()` changes this behavior:
+
 ```javascript
 console.log("First");
 
