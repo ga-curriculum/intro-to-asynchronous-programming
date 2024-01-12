@@ -14,7 +14,7 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 | [Concepts](./concepts/README.md) | -- | -- | Distinguish between synchronous and asynchronous programming in JavaScript  |
 | [Callbacks](./callbacks/README.md) | -- | -- | Understanding callback functions in relation to asynchronous JavaScript |
 | [Async/Await](./async-await/README.md) | -- | -- | Applying async/await syntax to asynchronous operations |
-| [Error handling with `try...catch`](./level-up/error-handling-with-try-catch.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
+| [Error handling with `try...catch`](./error-handling-with-try-catch/README.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
