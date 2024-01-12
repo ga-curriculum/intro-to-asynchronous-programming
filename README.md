@@ -14,6 +14,7 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 | [Concepts](./concepts/README.md) | -- | -- | Distinguish between synchronous and asynchronous programming in JavaScript  |
 | [Callbacks](./callbacks/README.md) | -- | -- | Understanding callback functions in relation to asynchronous JavaScript |
 | [Async/Await](./async-await/README.md) | -- | -- | Applying async/await syntax to asynchronous operations |
+| [Error handling with `try...catch`](./level-up/error-handling-with-try-catch.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
@@ -21,7 +22,6 @@ This module provides an introduction to asynchronous programming in JavaScript. 
 | ------ |:----------:|:-----:| ------ |
 | [`setTimeout()`](./level-up/set-timeout.md) | -- | -- | Implementing the `setTimeout` method |
 | [`then()` and `catch()`](./level-up/then-and-catch.md) | -- | -- | Implementing `then()` and `catch()` in API calls |
-| [Error handling with `try...catch`](./level-up/error-handling-with-try-catch.md) | -- | -- | Using `try...catch` blocks to handle errors in code |
 | [Intro to the Fetch API](./level-up/intro-to-the-fetch-api.md) | -- | -- | Understand the basics of the Fetch API in JavaScript |
 | [Testing Async/Await with an API Call](./level-up/testing-async-await-with-an-api-call.md) | -- | -- | Implement an API call in Javascript with `async/await` syntax |
 | [Handing Errors `catch` Won’t Catch](./level-up/handing-errors-catch-won’t-catch.md) | -- | -- | Understanding the limitations of `try...catch` when making API calls |
