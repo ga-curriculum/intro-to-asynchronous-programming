@@ -10,6 +10,15 @@ The primary function provided by the Fetch API is the [`fetch()`](https://develo
 
 ## Anatomy of `fetch` request
 
+The `fetch()` method takes two parameters:
+
+```javascript
+fetch(URL, options)
+```
+
+- A URL to the resource you want
+- An optional options object
+
 Let's take a look at how a fetch request is constructed:
 
 ```javascript

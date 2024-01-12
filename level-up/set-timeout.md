@@ -40,6 +40,11 @@ For instance, in the following synchronous code, each `console.log` statement pr
 console.log("First");
 console.log("Second");
 console.log("Third");
+
+// Output ->
+// First
+// Second
+// Third
 ```
 
 However, introducing `setTimeout()` changes this behavior:
@@ -52,6 +57,13 @@ setTimeout(() => {
 }, 1000);
 
 console.log("Third");
+
+// Output ->
+// First
+// Third
+// Second
 ```
 
-When the `setTimeout()` function is called, it schedules the `"Second"` message to print after a 1-second delay. However, this delay doesn't stop the rest of the code from running. That is why `"Third"` is printed immediately after `"First"`, without waiting for the 1-second delay. 
+When the `setTimeout()` function is called, it schedules the `"Second"` message to print after a 1-second delay. 
+
+However, this delay doesn't stop the rest of the code from running. That is why `"Third"` is printed immediately after `"First"`, without waiting for the 1-second delay. 
