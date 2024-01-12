@@ -2,7 +2,7 @@
 
 ## About
 
-In the realm of web development, understanding and effectively handling asynchronous operations is crucial for creating responsive and efficient applications. This module delves deep into the concepts and practical implementation of asynchronous programming in JavaScript. Key topics include understanding callback functions, exploring the concept of promises, and using the async/await syntax for API calls. 
+This module provides an essential guide to asynchronous programming in JavaScript, tailored for intermediate-level students. It covers core concepts, including `callbacks`, `async/await`, and error handling with `try...catch`, to equip learners with the skills for managing asynchronous tasks effectively. The advanced 'Level Up' section provides more resources for practical application- enhancing students' abilities to handle complex asynchronous patterns and network requests in real-world web development scenarios.
 
 ## Prerequisites
 
