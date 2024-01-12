@@ -6,18 +6,39 @@
   <link
     rel="stylesheet"
     href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+  />
+  <link
+    rel="stylesheet"
+    href="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/css/code-theme.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/css/custom-style.min.css"
+  />
+  <script
+    src="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/js/anchor.min.js"
+  ></script>
+  <script
+    src="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/js/highlightjs.min.js"
+  ></script>
+  <script
+    src="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/js/highlightjs-copy.min.js"
+  ></script>
+  <script
+    src="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/js/custom.min.js"
+  ></script>
+  <script
+    src="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/js/custom-defer.min.js"
+    defer
+  ></script>
+  <link 
+    rel="icon" 
+    type="image/png"
+    href="https://{{ site.github.pages_hostname }}/{{ site.github.owner_name }}/universal-resources-internal/static/assets/favicon.png"
   >
   <title>Intro to Asynchronous Programming</title>
 </head>
 <body>
   <div class="container-lg px-3 my-5 markdown-body">{{ content }}</div>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
-    integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg="
-    crossorigin="anonymous"
-  ></script>
-  <script>
-    anchors.add();
-  </script>
 </body>
 </html>
