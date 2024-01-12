@@ -1,5 +1,7 @@
 # ![Intro to Asynchronous Programming - Error handling with `try...catch`](./assets/hero.png)
 
+tktk - Remove Level up from hero
+
 **Learning objective:** By the end of this lesson, students will understand how to use `try...catch` blocks in JavaScript to handle errors in code effectively.
 
 ## What is a `try...catch` statement?
