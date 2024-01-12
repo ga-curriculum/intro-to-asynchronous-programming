@@ -14,11 +14,13 @@ fetch('https://jsonplaceholder.typicode.com/users/1')
   .then((data) => console.log(data));
 ```
 
-In the code block above, we are chaining together two instances of the `then()` method. Let's breakdown what is accomplished in each:
+In the code block above, we are chaining together two instances of the `then()` method. 
 
-- First callback: The first instance of `then()` has a callback of `(res) => res.json()`. This function receives the response (`res`) from the `fetch` request. It then calls `res.json()` to convert the response body into a JavaScript object. This conversion is also an asynchronous operation, so `res.json()` returns another yet another `Promise` object.
+Let's breakdown what is accomplished in each:
 
-- Second callback: The second instance of `then()` waits for the `Promise` returned by `res.json()` to be resolved. It then executes its callback `(data) => console.log(data)`, which receives the data and logs it to the console.
+- **First callback:** The first instance of `then()` has a callback of `(res) => res.json()`. This function receives the response (`res`) from the `fetch` request. It then calls `res.json()` to convert the response body into a JavaScript object. This conversion is also an asynchronous operation, so `res.json()` returns another yet another `Promise` object.
+
+- **Second callback:** The second instance of `then()` waits for the `Promise` returned by `res.json()` to be resolved. It then executes its callback `(data) => console.log(data)`, which receives the data and logs it to the console.
 
 ## `catch()`
 

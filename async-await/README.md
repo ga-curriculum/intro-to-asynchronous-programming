@@ -1,12 +1,12 @@
 # ![Intro to Asynchronous Programming - Async/Await](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will understand how the async/await syntax applies to asynchronous operations in JavaScript.
+**Learning Objective:** By the end of this lesson, students will understand how the async/await syntax applies to asynchronous operations in JavaScript.
 
-## The problem with callbacks
+## Asynchronous code and the challenge with callbacks
 
-Developers will often times nest several callback functions when dealing with asynchronous code. However, when callbacks need to call functions that also accept callbacks, it leads to deeply nested structures. This is also known as "callback hell" or the "pyramid of doom". The resulting code becomes hard to read and debug, as illustrated by the pyramid-like structure in the following example.
+Developers will often times nest several functions when they need to perform multiple async operations that depend on one another. However, when callbacks need to call functions that also accept callbacks, it leads to deeply nested structures. This is known as "callback hell" or the "pyramid of doom". The resulting code becomes hard to read and debug.
 
-To set up the example, let's create a second file, similar to the `test.txt` file we created before. 
+To see an example of this, let's create two more files, similar to the `test.txt` file we created before. 
 
 Put the following content in `test2.txt`:
 
@@ -24,7 +24,6 @@ Now let's update `app.js` to print the contents of both of these files, synchron
 
 ```javascript
 // app.js
-
 const fs = require('node:fs');
 
 fs.readFile('test.txt', 'utf8', (err, data) => {
@@ -37,47 +36,48 @@ fs.readFile('test.txt', 'utf8', (err, data) => {
   });
 });
 
-console.log('run this as soon a possible');
+console.log('run this as soon as possible');
 ```
 
-Can you see why this kind of structure has such negative names? To avoid this pattern, ES6 introduced *Async/Await*.
+Test the code:
 
-## What is Async/Await? 
+```bash
+node app.js
+```
 
-*Async/Await syntax* is an alternate way of handling operations that don't happen instantaneously, like fetching data from a database or reading a file. Async/Await is [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) that makes the handling of asynchronous operations more straightforward and readable - in essence, "sweeter" for human use. The only downside is that you need to learn two new JavaScript keywords.
+**Problem:** Now imagine many more layers of this structure in a larger application. While it works as intended, this code leads to deeply nested functions that become difficult to read and maintain.
 
-*`async`*
-When the `async` keyword is placed before a function declaration, it alerts javascript to the fact that there may be asynchronous operations that need to run synchronously (i.e. line by line).
+## Introducing Async/Await
 
-*`await`*
-The `await` operator is used to pause the execution of code until an asynchronous operation has completed. The `await` operator can only be used inside an `async` function.
+The *async/await syntax* is an alternate way of handling operations that don't happen instantaneously, like fetching data from a database or reading a file. Async/Await is [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) that makes the handling of asynchronous operations more straightforward and readable - in essence, "sweeter" for human use. The only downside is that you need to learn two new JavaScript keywords.
 
-Check [**MDN - async and await**](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await) for more information on async and await. 
+***`async`*** - When the `async` keyword is placed before a function declaration, it alerts javascript to the fact that there may be asynchronous operations that need to run synchronously (or line by line) in that function.
 
-## Anatomy of an `async` function
+***`await`*** - The `await` operator is used to pause the execution of code until an asynchronous operation has completed. The `await` operator can only be used inside of an `async` function.
 
-Let's take a moment to get a sense of how an `async` function is defined. Take a look at the hypothetical example below:
+Check the docs on [**MDN - async and await**](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await) for more information on the syntax and use of async and await.
+
+### Anatomy of an `async` Function
 
 ```javascript
-const index = async () => {
-  const response = await todoDB.find();
-  console.log(response);
-};
+  const index = async () => {
+    const data = await someDatabase.find();
+    console.log(data);
+  };
 ```
+  - **Key Components**:
+    - Use the `async` keyword right before the function declaration.
+    - Inside an `async` function, use `await` to pause further execution until the asynchronous operation completes.
 
-Notice how this syntax is quite similar to standard functions. The key difference is the addition of the `async` keyword. By making the function asynchronous, we can make use of the `await` operator inside the function. This pauses the execution of code inside the function until the asynchronous `todoDB.find()` operation is complete.
+## Implementing `async/await` syntax
 
-## Implementing Async/Await syntax
-
-Let's rewrite the previous file reading code using async/await:
+Let's replace the callback-based file reading structure with `async/await` for cleaner code:
 
 ```javascript
 // app.js
-
 const fs = require('node:fs/promises');
 
 const example = async () => {
-  console.log('run this as soon a possible');
   const data = await fs.readFile('test.txt', 'utf8');
   console.log(data);
   const data2 = await fs.readFile('test2.txt', 'utf8');
@@ -87,12 +87,30 @@ const example = async () => {
 }
 
 example();
+
+console.log('run this as soon as possible');
 ```
 
+Test the code:
+
+```bash
+node app.js
+```
+
+**What changed:**
+
+- We created an `async` function named `example`. This is necessary because the `await` operator can only be used inside `async` functions.
+
+- Inside `example()`, we use `await` before each `fs.readFile` call. This pauses execution of the function until each file reading is complete, allowing the code to run line-by-line in a readable manner, similar to synchronous code.
+
+- With `await`, `fs.readFile` directly returns the contents of the file as a string. This allows us to assign the file's content to variables (`data`, `data2`, `data3`) without using callback functions.
+
+- We've changed the `require` statement to `const fs = require('node:fs/promises');`. This imports the promise-based variant of Node's `fs` module, which is designed to work with `async/await` syntax, allowing for a more streamlined asynchronous code.
+
+
+**Benefits**:
+  - **Readable Code**: The use of `async` and `await` makes the code flow like synchronous code, improving readability.
+
+  - **Avoids Callback Hell**: By using `await`, we avoid nesting and make our code look more like a series of synchronous operations.
+
 So much better than using callbacks!
-
-We have defined and invoked an `async` function called `example` because the lines marked with `await` need to occur inside `async` functions and can't occur in global scope.
-
-Once Node has entered the invocation of `example()`, the flow of control runs in an easily readable manner from one line to the next without any need for callbacks. This is because we have added the `await` keyword in front of each `fs.readFile()` invocation. In addition, the `await` keyword allows `fs.readFile` to return the contents of the file as a string, rather than pass it into a callback function as an argument.nThis allows us to assign this information to the variable `data`.
-
-> 📚 `const fs = require('node:fs/promises');` is a slightly different NodeJS package for interactions with the file system that enables `async`/`await` syntax.
