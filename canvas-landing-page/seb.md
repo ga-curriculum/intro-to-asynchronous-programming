@@ -15,10 +15,11 @@ This module provides an essential guide to asynchronous programming in JavaScrip
 | [Error handling with `try...catch`](../error-handling-with-try-catch/README.md) | Using `try...catch` blocks to handle errors in code |
 
 ## Level Up content
+
 | Lesson | Skills |
 | ------ | ------ |
 | [`setTimeout()`](../level-up/set-timeout.md) | Implementing the `setTimeout` method |
-| [Promises](../level-up/promises.md) |  Understanding the `Promise` object |
+| [Promises](../level-up/promises.md) | Understanding the `Promise` object |
 | [Intro to the Fetch API](../level-up/intro-to-the-fetch-api.md) | Understand the basics of the `Fetch API` in JavaScript |
 | [`then()` and `catch()`](../level-up/then-and-catch.md) | Implementing `then()` and `catch()` in API calls |
 | [Testing `async/await` with an API Call](../level-up/testing-async-await-with-an-api-call.md) | Implement `fetch()`  with `async/await` syntax |

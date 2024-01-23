@@ -21,6 +21,7 @@ This module provides an essential guide to asynchronous programming in JavaScrip
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
+
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
 | [`setTimeout()`](./level-up/set-timeout.md) | -- | -- | Implementing the `setTimeout` method |
