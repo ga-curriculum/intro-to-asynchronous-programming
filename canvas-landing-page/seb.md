@@ -28,4 +28,4 @@ This module provides an essential guide to asynchronous programming in JavaScrip
 
 ## References
 
-📖 [Reference Materials](./references/README.md)
+📖 [Reference Materials](../references/README.md)
