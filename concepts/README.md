@@ -4,28 +4,28 @@
 
 ## What is asynchronous programming?
 
-By default, JavaScript operates in a synchronous manner, where code is executed line by line in the order that it was written. This also means that each line of code must complete its execution before the next line can begin. If a particular task is time-consuming, it can cause a delay in the execution of subsequent lines of code.
+By default, JavaScript operates synchronously, where code is executed line by line in the order it was written. This also means that each line of code must complete its execution before the execution of the following line can begin. If a particular task is time-consuming, it can cause a delay in the execution of subsequent lines of code.
 
-[Asynchronous programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) is a way to make your program preform tasks that might take a while, without blocking other tasks. 
+*[Asynchronous programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)* is a way to make your program perform tasks that might take a while without blocking other tasks.
 
-Asynchronous programming allows for the initiation of a task that will complete sometime in the future, while the rest of the code continues to run. An asynchronous operation allows the program to handle other tasks, and then come back to the original task once it is ready.
+Asynchronous programming allows a program to start a task that will be completed sometime in the future without blocking other tasks. This frees up the program to execute other tasks and then return to the original task once it is ready.
 
 ![Asynchronous and Synchronous Programming](./assets/sync-vs-async.png)
 
-> 📚  In programming, asynchronous refers to operations or events that don't occur in sequential order.
+> 📚 In programming, asynchronous refers to operations or events that don't occur in sequential order.
 
 ## Why do we use asynchronous programming?
 
-Asynchronous programming is especially useful for tasks that involve waiting. This usually involves scenarios where an application needs to wait for an external process, like fetching data from a database or reading a file. 
+Asynchronous programming is useful for tasks that involve waiting. This usually involves scenarios where an application needs to wait for an external process, like fetching data from a database or reading a file.
 
-Unlike synchronous programming, where the entire application might freeze during such operations, asynchronous programming allows the rest of your application to remain active. This means your program can continue updating the user interface or responding to user inputs while waiting for the data or file.
+Unlike synchronous programming, where the entire application might freeze during such operations, asynchronous programming allows the rest of your application to remain active. This allows your program to update the user interface or respond to user inputs while waiting for the data or file.
 
-Asynchronous programming significantly improves the overall user experience by preventing the freezing of the application during lengthy operations. Users are not left waiting for the application to respond, leading to a smoother and more interactive interface.
+Asynchronous programming significantly improves the overall user experience by preventing an application from becoming unresponsive during lengthy operations. Users are not left waiting for the application to respond, leading to a smoother and more interactive interface.
 
-You've most likely experienced asynchronous programming already, but you probably didn't realize it. Many applications like Facebook, Twitter, various blogs, and news media sites will load only a small amount of content initially, so that the user is able to quickly view and interact with the application. As the user scrolls down the page, additional content is loaded at the bottom, so that there is always something additional to look at below whatever the user is currently viewing. 
+You've likely encountered apps that utilize asynchronous programming before, but you may not have realized it. Apps like Facebook, Twitter, various blogs, and news media sites will load only a small amount of content initially so the user can quickly view and interact with the application. As the user scrolls down the page, additional content is loaded so that there is always more to look at below whatever the user is viewing.
 
-This kind of feature is called *infinite scroll*, and it's just one of many examples of asynchronous programming. If these applications had tried to load all the information as the page is loaded, the user would have to wait for a very long time. Instead, the page loads with a small amount of content and then begins adding additional content asynchronously as the user interacts with the application.
+This feature is commonly referred to as *infinite scroll*, and it's just one of many examples of asynchronous programming. If these applications tried to load ***all*** the information available as the page was loaded, the user experience would suffer. Instead, the page loads with a small amount of content to get the user started and then adds more asynchronously as they interact with the application.
 
-Many essential tools and operations in JavaScript are designed to function asynchronously - operations like reading files or database queries being prime examples. Understanding how to work with asynchronous code will enable you to integrate these functionalities in your applications.
+Many essential tools and operations in JavaScript are designed to function asynchronously - operations like reading files or database queries being prime examples. Understanding how to work with asynchronous code will enable you to add these features to your apps.
 
->💡 Understanding asynchronous programming is crucial in JavaScript, especially for operations like server requests, file reading, or any other task that takes time to complete. 
+> 💡 Understanding asynchronous programming is crucial in JavaScript, especially for operations like server requests, file reading, or any other task that takes time to complete.
