@@ -11,7 +11,7 @@ A **Promise** in JavaScript is a powerful and versatile object that represents t
 A promise can exist in one of three states:
 
 1. **Pending**: The initial state of a promise. The operation has not completed yet.
-2. **Fulfilled**: Indicates that the asynchronous operation was successful. 
+2. **Fulfilled**: Indicates that the asynchronous operation was successful.
 3. **Rejected**: Signifies that the operation failed or encountered an error.
 
 ### Key characteristics of Promises
@@ -21,15 +21,15 @@ A promise can exist in one of three states:
 
 ## Handling Promises
 
-In modern JavaScript, many built-in methods return promises, making it easier to work with asynchronous operations. 
+In modern JavaScript, many built-in methods return promises, making it easier to work with asynchronous operations.
 
 Common examples include:
 
- - Node's `fs/promises` module, 
- - fetching data from a web API using `fetch()`
- - Interacting with databases
+- Node's `fs/promises` module
+- fetching data from a web API using `fetch()`
+- Interacting with databases
 
-Promises in JavaScript can be consumed in various ways, including using `.then()` and `.catch()` for chaining asynchronous operations, `async/await` for more modern  readable and synchronous-style code, or employing `Promise.all()` for executing multiple promises concurrently and handling their results together. 
+Promises in JavaScript can be consumed in various ways, including using `.then()` and `.catch()` for chaining asynchronous operations, `async/await` for more modern  readable and synchronous-style code, or employing `Promise.all()` for executing multiple promises concurrently and handling their results together.
 
 > To ***consume a promise*** in JavaScript refers to the process of handling the eventual result (either fulfillment or rejection) of a promise.
 
@@ -103,7 +103,6 @@ firstAsyncFunction()
   .catch((error) => console.log(error));
 ```
 
-
 ## Creating a Promise from scratch
 
 Promises are created using the `Promise` constructor, which takes a function as its argument. This function generally performs an asynchronous operation and calls either `resolve` (on successful completion) or `reject` (on failure).
@@ -137,5 +136,3 @@ myPromise
     console.log(error); // 'Failure.'
   });
 ```
-
-
