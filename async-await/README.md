@@ -6,9 +6,9 @@ tktk Hunter, could you codify `async` and `await` in this hero?
 
 ## Asynchronous code and the challenge with callbacks
 
-Developers will often nest several functions when they must perform multiple asynchronous operations that depend on one another. However, when callbacks need to call functions that also accept callbacks, it leads to deeply nested structures. This is known as "callback hell" or the "pyramid of doom". The resulting code becomes hard to read and debug.
+Developers will often nest several functions in order to perform multiple asynchronous operations that depend on one another. However, when callbacks need to call functions that also accept callbacks, it leads to deeply nested structures. This is known as "callback hell" or the "pyramid of doom". The resulting code becomes harder to read and more difficult to debug.
 
-To see an example, let's create two more files similar to the `test.txt` file we created before.
+To see an example, let's create two more files similar to the `test.txt` file we created before:
 
 ```bash
 touch test2.txt test3.txt
@@ -26,7 +26,7 @@ Repeat the process again with a `test3.txt` file:
 hello 3!
 ```
 
-Now let's update `app.js` to print the contents of both of these files synchronously:
+Now let's update `app.js` to print the contents of all of these files asynchronously:
 
 ```javascript
 const fs = require('node:fs');
@@ -54,13 +54,13 @@ Now, imagine many more layers of this structure in a larger application. While i
 
 ## Introducing `async`/`await`
 
-The *`async`/`await` syntax* is an alternate way of handling operations that don't happen instantaneously, like fetching data from a database or reading a file. `async`/`await` is [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar) that makes handling asynchronous operations more straightforward and readable - in essence, "sweeter" for human use. The only downside is that you need to learn two new JavaScript keywords.
+The *`async`/`await`* syntax is an alternate way of handling operations that don't happen instantaneously.
 
-> 📚 When the *`async`* keyword is placed before a function declaration, it alerts JavaScript that asynchronous operations may need to run synchronously (or line by line) in that function.
+> 📚 When the *`async`* keyword is used when defining a function, it allows us to wait for an asynchronous operation to complete before executing more code in that function.
 >
-> The *`await`* operator pauses the execution of the rest of the code in a function until an asynchronous operation has finished. The `await` operator can only be used inside of an `async` function.
+> This is accomplished by using the *`await`* operator. It  pauses the execution of the rest of the code in a function until an asynchronous operation has finished. The `await` operator can only be used inside of an `async` function.
 >
-> The `await` operator is handy when working with asynchronous code. Often, we don't want to continue executing the code in a function until we have the results of what we're waiting on. For example, if we were requesting data from a database, we would want to ensure we've retrieved that data before trying to do something with it later in the function.
+> Often, we don't want to continue executing the code in a function until we have the results of what we're waiting on. For example, if we're requesting data from a database, we would want to ensure we've retrieved that data before trying to do something with it later in the function.
 
 ### Anatomy of an `async` Function
 
@@ -73,7 +73,7 @@ const name = async () => {
 
 tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
 
-1. Use the `async` keyword right before the function declaration.
+1. Use the `async` keyword immediately before the function declaration.
 2. Inside an `async` function, use `await` to pause further execution until the asynchronous operation is complete.
 3. Note `name` could be anything, just like any other function. `someAsyncAction()` could be any asynchronous action.
 
@@ -110,16 +110,14 @@ node app.js
 
 - We created an `async` function named `readDataFiles`.
 
-- Inside `readDataFiles()`, we use `await` before each `fs.readFile` call. This pauses the function's execution until each file reading is complete, allowing the code to run line-by-line in a readable manner, similar to synchronous code.
+- Inside `readDataFiles()`, we use `await` before each `fs.readFile` call. This pauses the function's execution until each file read is complete, allowing the code to run line-by-line, similar to synchronous code.
 
 - With `await`, `fs.readFile` directly returns the file's contents as a string. This allows us to assign the file's content to variables (`data`, `data2`, `data3`) without callback functions.
 
-- While this behavior hasn't changed, it's important to note that you see the text "run this as soon as possible" first.
+- It's important to note that you still see the text "run this as soon as possible" first. This behavior hasn't changed.
 
 ## Benefits of `async`/`await`
 
 - **Readable code**: Using `async` and `await` makes the code flow more like synchronous code, improving readability.
 
 - **Avoids callback hell**: By using `await`, we avoid nesting and make our code look more like a series of synchronous operations.
-
-So much better than using callbacks!

@@ -2,7 +2,7 @@
 
 ## About
 
-This module provides an essential guide to asynchronous programming in JavaScript, tailored for intermediate-level students. It covers core concepts, including callbacks, `async`/`await`, and error handling with `try...catch` to equip learners with the skills for managing asynchronous tasks effectively.
+This module provides an essential guide to asynchronous programming in JavaScript, tailored to intermediate-level students. It covers core concepts, including callback functions, `async`/`await`, and error handling with `try...catch` to equip learners with the skills needed for managing asynchronous tasks effectively.
 
 Some lessons provide more resources for practical application - enhancing students' abilities to handle complex asynchronous patterns and network requests in real-world web development scenarios.
 
