@@ -6,7 +6,7 @@ tktk Hunter, could you remove the Level Up text from this hero?
 
 ## Understanding JavaScript promises
 
-Promises in JavaScript are a crucial mechanism that allows asynchronous code to be written. A `Promise` represents the current state of an asynchronous operation.
+[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in JavaScript are a crucial mechanism that allows asynchronous code to be written. A `Promise` represents the current state of an asynchronous operation.
 
 ### Promise states
 
@@ -17,6 +17,8 @@ A promise can exist in one of three states:
 3. **Rejected**: The asynchronous operation failed or encountered an error.
 
 Once a promise is either fulfilled or rejected, it is considered ***settled***, and its state can no longer change.
+
+tktk Hunter, feel like an asset would work well here to demo this.
 
 ## Handling Promises
 
