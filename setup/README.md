@@ -15,31 +15,20 @@ mkdir intro-to-asynchronous-programming
 cd intro-to-asynchronous-programming
 ```
 
-Then, create an **`app.js`** and an **`index.html`** file. These files will hold your work for this lecture:
+Then, create an **`app.js`** file. This file will hold your work for this lecture:
 
 ```bash
-touch app.js index.html
+touch app.js
 ```
 
-With the files created, open the contents of the directory in VSCode:
+With the files created, open the contents of the directory in VS Code:
 
 ```bash
 code .
 ```
 
-Open the `index.html` file and add HTML boilerplate by typing `!` and then hitting the `Tab` key. Then make use of the **`app.js`** file by adding this line inside the `<head>` tag:
+With this setup complete, we'll use Node to executing the code we write in **`app.js`**:
 
-```html
-<script defer src="./app.js"></script>
-```
-
-With this setup complete, we'll have two methods at our disposal for executing the code we write in **`app.js`**:
-
-- Open the **`index.html`** file in your browser and access the console output in your browser's dev tools.
-- Use `node` to execute the **`app.js`** file directly by using this command in your terminal:
-  
 ```bash
 node app.js
 ```
-
-While either method is acceptable, you should use the same method as your instructor for simplicity.
