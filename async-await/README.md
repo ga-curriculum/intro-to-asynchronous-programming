@@ -2,7 +2,7 @@
 
 tktk Hunter, could you codify `async` and `await` in this hero?
 
-**Learning Objective:** By the end of this lesson, students will understand how the `async`/`await` syntax applies to asynchronous operations in JavaScript.
+**Learning objective:** By the end of this lesson, students will understand how the `async`/`await` syntax applies to asynchronous operations in JavaScript.
 
 ## Asynchronous code and the challenge with callbacks
 

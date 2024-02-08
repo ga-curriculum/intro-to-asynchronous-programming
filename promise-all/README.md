@@ -28,7 +28,7 @@ const todosApiUrl = 'https://jsonplaceholder.typicode.com/todos/4';
 
 Note the `/4` at the end of each of these URLs. The API uses this number as a URL parameter, indicating to the API that we only want the `post` or `todo` with an `id` of 4.
 
-Next, define and call upon a function called `fetchMultiple`, like the example below:
+Next, define and call a function named `fetchMultiple`, like the example below:
 
 ```javascript
 const fetchMultiple = async () => {
@@ -53,7 +53,7 @@ Because we are passing an array containing two items - `postsPromise` and `todos
 
 ## Extracting data with `Promise.all()`
 
-How might we use `Promise.all()` to extract the data from our array of responses? As we saw earlier, `Promise.all()` can accept an array of promises as an argument. As a result, the JavaScript `map()` method will be helpful here because it returns an array of transformed data.
+How might we use `Promise.all()` to extract the data from our array of responses? As we saw earlier, `Promise.all()` can accept an array of promises as an argument. As a result, the JavaScript `map()` method will be helpful here because it returns a new array containing transformed data.
 
 In this case, we will transform the data by turning each response into a new promise. Again, note we're not awaiting the `json()` method like you're used to seeing, but instead awaiting the `Promise.all()` method. This means we won't wait for one promise to be settled before creating the next one. Instead, we'll start turning each response into a JavaScript object consecutively, and then when all of the responses have been turned into usable objects, we'll move on.
 
@@ -86,7 +86,7 @@ If we run our code, we should see something like the following print to our cons
 ```javascript
 [
   {
-    id: 1,
+    id: 4,
     name: 'Leanne Graham',
     username: 'Bret',
     email: 'Sincere@april.biz',
@@ -107,7 +107,7 @@ If we run our code, we should see something like the following print to our cons
   },
   {
     userId: 1,
-    id: 1,
+    id: 4,
     title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
     body: 'quia et suscipit\n' +
       'suscipit recusandae consequuntur expedita et cum\n' +

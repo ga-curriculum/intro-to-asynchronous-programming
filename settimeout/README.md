@@ -6,7 +6,7 @@ tktk Hunter, could you remove Level Up from this hero?
 
 ## What is the `setTimeout()` method?
 
-A great example of asynchronous code in JavaScript is the global [`setTimeout()`](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) method. The `setTimeout()` method is designed to create a timer that runs a block of code when the timer runs out. The `setTimeout()` method is asynchronous in that it breaks from the ordered execution of code and does not block the execution of later lines of code.
+A great example of asynchronous code in JavaScript is the global [`setTimeout()`](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout) method. The `setTimeout()` method is designed execute a callback function after a specified amount of time. The `setTimeout()` method is asynchronous; it breaks from the ordered execution of code and does not block the execution of later lines of code.
 
 ### Anatomy of `setTimeout()`
 

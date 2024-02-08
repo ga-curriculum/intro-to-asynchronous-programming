@@ -2,7 +2,7 @@
 
 tktk Hunter, could you remove Level Up from this hero?
 
-**Learning Objective:** By the end of this lesson, students will understand the basics of the Fetch API in JavaScript and how to make fetch requests.
+**Learning objective:** By the end of this lesson, students will understand the basics of the Fetch API in JavaScript and how to make fetch requests.
 
 ## What is the Fetch API?
 
@@ -39,12 +39,12 @@ const functionName = async (url) => {
 
 tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
 
-1. We define an asynchronous function called `functionName` that will accept a URL as an argument. Like any other function, the name we select does not impact how it behaves, but the name should describe what action the function carries out for usability.
+1. We define an asynchronous function called `functionName` that will accept a URL as an argument. Like any other function, the name we select does not impact how it behaves, but the name should describe what action the function carries out for readability.
 2. We use `fetch()` to make a `GET` request to the specified URL inside the function. Since `fetch` is asynchronous, we must use `await` to pause the execution of this function until we receive a response. This is necessary because we can't process data we don't have yet.
 3. Next, the response is converted into a JavaScript object using the *[`json()`](https://developer.mozilla.org/en-US/docs/Web/API/Response/json) method*. This step is also asynchronous, so we again use the `await` operator.
 4. Finally, the fetched data is logged to the console.
 
-> 📚 The `.json()` method in JavaScript converts a response from a network request that responds with *JSON* data on the request's `body` into a JavaScript object. It's typically applied to the response object returned by the a `fetch()` to handle *JSON* data sent from a server.
+> 📚 The `json()` method converts the *JSON* text in the `body` of a response object to a JavaScript object. It's typically applied to the response object returned by the a `fetch()` to handle *JSON* data sent from a server.
 >
 > *JSON*, short for JavaScript Object Notation, is a common format for storing and transporting data across the internet. It's structure closely resembles a JavaScript object.
 
@@ -56,21 +56,13 @@ The [`options` object](https://developer.mozilla.org/en-US/docs/Web/API/fetch#op
 
 The `method` property is used to specify the request's HTTP method (`GET`, `POST`, `PUT`, `DELETE`, etc.).
 
-```javascript
-  fetch(url, { method: 'POST' });
-```
-
 ### [`headers`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#headers)
 
-The `headers` property is used to set *HTTP headers* for the request. HTTP headers include additional information about the request, such as the type of data being submitted.
-
-```javascript
-fetch(url, { headers: { 'Content-Type': 'application/json' } });
-```
+The `headers` property is used to set HTTP headers for the request. HTTP headers include additional information about the request, such as the type of data being submitted.
 
 ### [`body`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#body)
 
-The `body` property includes any data, such as information entered into a form.
+The `body` property includes any data, such as information entered into a form. Here's an example that utilizes the `method`, `headers`, and `body` property.
 
 ```javascript
 fetch(url, { 
@@ -82,17 +74,11 @@ fetch(url, {
 
 > 💡 In the example above, the [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) method converts the JavaScript object into a `JSON` string. Whenever we put `JSON` into the request's `body`, we must also set the `headers` property as demonstrated above: `headers: { 'Content-Type': 'application/json' }`.
 
-### [`mode`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#mode)
-
-The `mode` property specifies the mode of the request, such as `cors`, `no-cors`, or `same-origin`. It's necessary for handling *[cross-origin requests](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)*.
-
-> 📚 *Cross-origin requests* happen when a website tries to access resources from an outside source on the web. Normally, browsers block these requests for security reasons, but they can be conducted safely using the CORS (Cross-Origin Resource Sharing) mechanism.
-
 ## Making a fetch request
 
-We're using an API called [JSONPlaceholder](https://jsonplaceholder.typicode.com/), which is used for testing and prototyping.
+Let's make a fetch request using an API called [JSONPlaceholder](https://jsonplaceholder.typicode.com/), which is used for testing and prototyping.
 
-They provide six resources we can get data for - we'll use the `users` resource, which will give us random placeholder user data.
+They provide six resources we can get data for - we'll use the `users` resource, which will give us an array of 10 random placeholder user objects.
 
 First, let's define the API *endpoint* we will be using:
 

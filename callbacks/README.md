@@ -1,6 +1,6 @@
 # ![Intro to Asynchronous Programming - Callbacks](./assets/hero.png)
 
-**Learning Objective:** By the end of this lesson, students will understand how to use callback functions to construct asynchronous JavaScript.
+**Learning objective:** By the end of this lesson, students will understand how to use callback functions to construct asynchronous JavaScript.
 
 ## Understanding callbacks in asynchronous JavaScript
 

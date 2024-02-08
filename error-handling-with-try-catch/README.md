@@ -4,7 +4,7 @@
 
 ## What is a `try...catch` statement?
 
-The try/catch statement provides a way to handle errors that may occur in a block of code without stopping the execution of the entire script.
+The `try...catch` statement provides a way to handle errors that may occur in a block of code without stopping the execution of the entire script.
 
 ### `try`
 
@@ -16,13 +16,13 @@ The try/catch statement provides a way to handle errors that may occur in a bloc
 
 ### `catch`
 
-- The `catch` block is executed if an error is thrown within the `try` block.
+- The code inside the `catch` block is executed if an error is thrown within the `try` block.
 
 - It receives an `error` object that contains details about what went wrong, allowing you to handle the error, console log it, or provide alternative logic.
 
 ## Anatomy of `try...catch`
 
-Let's take a moment to understand how to structure a `try...catch` block.
+Let's take a closer look at the to structure a `try...catch` block.
 
 ```javascript
 try {
@@ -34,13 +34,13 @@ try {
 
 tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
 
-1. `try` keyword. The code in the block that follows this will run until a line of code throws an error or until there is no code left to execute.
+1. The `try` keyword. The code in the block that follows will run until either an error is thrown or there is no code left to execute.
 2. The code to run. We expect that this code may throw an error.
 3. The `catch` keyword. The code in the block that follows will only run if an error occurrs in the `try` block.
-4. The `error`. Details about the error can be found here, but the structure of the data held can vary. You can name this identifier something of your choice (`error`, `err`, or `e` are all common).
+4. The `error`. Details about the error are held in this object. The properties of this object can vary. You can name this identifier something of your choice (`error`, `err`, or `e` are all common).
 5. The code to run if an error is caught. This can be as little as just console logging the error.
 
-In this structure, the `try` block can contain any code that might throw an `error` when executing. When an `error` is thrown in the `try` block, it is caught and handled by the `catch` block, allowing an application to continue running.
+In this structure, the `try` block can contain any code that might throw an `error` during execution. When an `error` is thrown in the `try` block, it is caught and handled by the `catch` block, allowing an application to continue running.
 
 Visit the [`try...catch` docs on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) for more information on the syntax and use of try and catch.
 
