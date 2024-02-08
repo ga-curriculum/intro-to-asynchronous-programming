@@ -24,15 +24,7 @@ The `try...catch` statement provides a way to handle errors that may occur in a 
 
 Let's take a closer look at the to structure a `try...catch` block.
 
-```javascript
-try {
-  // Code that could potentially throw an error
-} catch (error) {
-  // Code to handle that error
-}
-```
-
-tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
+![Anatomy of `try...catch`](./assets/try-catch.png)
 
 1. The `try` keyword. The code in the block that follows will run until either an error is thrown or there is no code left to execute.
 2. The code to run. We expect that this code may throw an error.

@@ -1,7 +1,5 @@
 # ![Intro to Asynchronous Programming - Intro to the Fetch API](./assets/hero.png)
 
-tktk Hunter, could you remove Level Up from this hero?
-
 **Learning objective:** By the end of this lesson, students will understand the basics of the Fetch API in JavaScript and how to make fetch requests.
 
 ## What is the Fetch API?
@@ -18,26 +16,14 @@ The `fetch()` method accepts a URL as an argument and returns a promise that res
 
 The `fetch()` method takes two parameters:
 
-```javascript
-fetch(url, options);
-```
-
-tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
+![Anatomy of the `fetch()` method](./assets/fetch-method.png)
 
 1. A URL to the resource you want (the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/fetch#parameters) refer to this as the `resource`, but this will always be a URL for our purposes.)
 2. An optional options object. The [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/fetch#options) have documentation for all of the valid properties in this object. The most common ones are covered in more detail below.
 
 Let's take a look at how a basic fetch request is typically constructed:
 
-```javascript
-const functionName = async (url) => {
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-};
-```
-
-tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
+![Anatomy of a fetch request](./assets/fetch-request.png)
 
 1. We define an asynchronous function called `functionName` that will accept a URL as an argument. Like any other function, the name we select does not impact how it behaves, but the name should describe what action the function carries out for readability.
 2. We use `fetch()` to make a `GET` request to the specified URL inside the function. Since `fetch` is asynchronous, we must use `await` to pause the execution of this function until we receive a response. This is necessary because we can't process data we don't have yet.

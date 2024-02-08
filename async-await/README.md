@@ -1,7 +1,5 @@
 # ![Intro to Asynchronous Programming - async/await](./assets/hero.png)
 
-tktk Hunter, could you codify `async` and `await` in this hero?
-
 **Learning objective:** By the end of this lesson, students will understand how the `async`/`await` syntax applies to asynchronous operations in JavaScript.
 
 ## Asynchronous code and the challenge with callbacks
@@ -64,18 +62,11 @@ The *`async`/`await`* syntax is an alternate way of handling operations that don
 
 ### Anatomy of an `async` Function
 
-```javascript
-const name = async () => {
-  const data = await someAsyncAction();
-  console.log(data);
-};
-```
+![Anatomy of an `async` Function](./assets/anatomy-of-async.png)
 
-tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
-
-1. Use the `async` keyword immediately before the function declaration.
-2. Inside an `async` function, use `await` to pause further execution until the asynchronous operation is complete.
-3. Note `name` could be anything, just like any other function. `someAsyncAction()` could be any asynchronous action.
+1. Note `functionName` could be anything, just like any other function. `someAsyncAction()` could be any asynchronous action.
+2. Use the `async` keyword immediately before the function definition.
+3. Inside the asynchronous function, use `await` to pause further execution until the asynchronous operation is complete.
 
 ## Implementing `async`/`await` syntax
 

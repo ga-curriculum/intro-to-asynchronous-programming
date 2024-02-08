@@ -1,7 +1,5 @@
 # ![Intro to Asynchronous Programming - Handing Errors catch Won't Catch](./assets/hero.png)
 
-tktk Hunter, could you remove Level Up from this hero?
-
 **Learning objective:** By the end of this lesson, students will understand the limitations of `try...catch` when making API calls and ways to add custom error handling.
 
 Using `try...catch` with API calls has certain limitations. When making fetch requests in JavaScript, it is helpful to check the `response.ok` property in addition to using a `try...catch` block.

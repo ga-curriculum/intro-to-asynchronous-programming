@@ -1,7 +1,5 @@
 # ![Intro to Asynchronous Programming - Promise.all()](./assets/hero.png)
 
-tktk Hunter, could you remove Level Up from this hero?
-
 **Learning objective:** By the end of this lesson, students will understand how to use `Promise.all()` to handle multiple promises simultaneously.
 
 ## What is `Promise.all()`?
@@ -12,7 +10,7 @@ tktk Hunter, could you remove Level Up from this hero?
 
 Imagine you have multiple API calls in the same function that don't depend on one another, and you need all the results to proceed. Instead of waiting for each call to complete one after the other, you can use `Promise.all()` to make these calls in parallel. `Promise.all()` immediately returns an error if any promise is rejected.
 
-tktk Hunter, can you add a graphic similar to the one in the concepts lecture that might help demonstrate this? Like a **With `Promise.all()`** and **Without `Promise.all()`** graph.
+![Tasks with `Promise.all()` and Without `Promise.all()`](./assets/tasks-with-and-without-promise-all.png)
 
 ## Making API calls with `Promise.all()`
 
@@ -57,7 +55,7 @@ How might we use `Promise.all()` to extract the data from our array of responses
 
 In this case, we will transform the data by turning each response into a new promise. Again, note we're not awaiting the `json()` method like you're used to seeing, but instead awaiting the `Promise.all()` method. This means we won't wait for one promise to be settled before creating the next one. Instead, we'll start turning each response into a JavaScript object consecutively, and then when all of the responses have been turned into usable objects, we'll move on.
 
-tktk Hunter, maybe another asset here similar to the one up above, but with these specific actions to tie this all together?
+![Bundled promises](./assets/bundled-promises.png)
 
 Let's modify our code with the following:
 
