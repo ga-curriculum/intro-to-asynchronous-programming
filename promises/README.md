@@ -8,7 +8,6 @@
 
 ### Promise states
 
-
 ![Promise states](./assets/promise-states.png)
 
 A promise can exist in one of three states:
