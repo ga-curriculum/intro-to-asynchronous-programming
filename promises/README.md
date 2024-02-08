@@ -1,7 +1,5 @@
 # ![Intro to Asynchronous Programming - Promises](./assets/hero.png)
 
-tktk Hunter, could you remove the Level Up text from this hero?
-
 **Learning objective:** By the end of this lesson, students will have a comprehensive understanding of JavaScript promises and their application in managing asynchronous operations.
 
 ## Understanding JavaScript promises
@@ -10,6 +8,9 @@ tktk Hunter, could you remove the Level Up text from this hero?
 
 ### Promise states
 
+
+![Promise states](./assets/promise-states.png)
+
 A promise can exist in one of three states:
 
 1. **Pending**: The initial state of a promise when it's created. The asynchronous operation has not been completed yet, and the results are pending.
@@ -17,8 +18,6 @@ A promise can exist in one of three states:
 3. **Rejected**: The asynchronous operation failed or encountered an error.
 
 Once a promise is either fulfilled or rejected, it is considered ***settled***, and its state can no longer change.
-
-tktk Hunter, feel like an asset would work well here to demo this.
 
 ## Handling Promises
 

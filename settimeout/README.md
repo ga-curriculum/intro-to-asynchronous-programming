@@ -1,7 +1,5 @@
 # ![Intro to Asynchronous Programming - setTimeout()](./assets/hero.png)
 
-tktk Hunter, could you remove Level Up from this hero?
-
 **Learning objective:** By the end of this lesson, students will be able to utilize the `setTimeout()` method in JavaScript.
 
 ## What is the `setTimeout()` method?
@@ -16,7 +14,7 @@ The `setTimeout()` method is constructed like this:
 setTimeout(callback, delay);
 ```
 
-tktk Hunter, could you do something like we did in <https://git.generalassemb.ly/modular-curriculum-all-courses/intro-to-javascript-functions/blob/main/fundamentals/README.md> to replace the above code block?
+![Anatomy of `setTimeout()`](./assets/set-timeout.png)
 
 1. **`callback`** - This is the function that `setTimeout()` will execute after the specified delay. It can be either a named function or an anonymous function.
 2. **`delay`** - This specifies the amount of time to wait before executing the `callback`, measured in milliseconds. For example, a delay of 1000 milliseconds equates to 1 second.
