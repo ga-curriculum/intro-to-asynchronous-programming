@@ -64,9 +64,9 @@ The *`async`/`await`* syntax is an alternate way of handling operations that don
 
 ![Anatomy of an `async` Function](./assets/anatomy-of-async.png)
 
-1. Note `functionName` could be anything, just like any other function. `someAsyncAction()` could be any asynchronous action.
+1. Note `functionName` could be anything, just like any other function.
 2. Use the `async` keyword immediately before the function definition.
-3. Inside the asynchronous function, use `await` to pause further execution until the asynchronous operation is complete.
+3. Inside the asynchronous function, use `await` to pause further execution until the asynchronous operation is complete. `someAsyncAction()` could be any asynchronous action.
 
 ## Implementing `async`/`await` syntax
 
