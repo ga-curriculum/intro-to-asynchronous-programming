@@ -10,8 +10,6 @@ JavaScript allows us to make HTTP requests from our application without relying 
 
 The Fetch API facilitates communication between a client and a server, allowing the application (acting as a client) to generate requests and process responses. The primary function provided by the API is the [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/fetch) method.
 
-The `fetch()` method accepts a URL as an argument and returns a promise that resolves to a response object. The `fetch()` method also accepts an optional options object. Among other things, it can be used to specify the HTTP method of the request. If no HTTP method is selected, the default `GET` method is used.
-
 ## Anatomy of the `fetch()` method
 
 The `fetch()` method takes two parameters:
@@ -40,7 +38,7 @@ The [`options` object](https://developer.mozilla.org/en-US/docs/Web/API/fetch#op
 
 ### [`method`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#method)
 
-The `method` property is used to specify the request's HTTP method (`GET`, `POST`, `PUT`, `DELETE`, etc.).
+The `method` property is used to specify the request's HTTP method (`GET`, `POST`, `PUT`, `DELETE`, etc.). If no HTTP method is provided, the default `GET` method is used.
 
 ### [`headers`](https://developer.mozilla.org/en-US/docs/Web/API/fetch#headers)
 
