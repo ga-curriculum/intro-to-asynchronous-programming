@@ -1,6 +1,6 @@
 # ![Intro to Asynchronous Programming - Promises](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will have a comprehensive understanding of JavaScript promises and their application in managing asynchronous operations.
+**Learning objective:** By the end of this lesson, students will have a basic understanding of JavaScript promises and their application in managing asynchronous operations.
 
 ## Understanding JavaScript promises
 
