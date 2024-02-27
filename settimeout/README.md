@@ -56,15 +56,3 @@ console.log("Third");
 When the `setTimeout()` function is called, it schedules the `Second` message to print after a 1-second delay.
 
 However, this delay doesn't stop the rest of the code from running. That is why `Third` is printed immediately after `First`, without waiting for the 1-second delay.
-
-## Optional arguments
-
-The `setTimeout()` method can also accept a series of optional arguments. These arguments are passed to the `callback` when it is executed.
-
-```javascript
-setTimeout((message) => {
-   console.log(message);
-}, 2000, 'Hello, World!');
-```
-
-In the example above, the callback function defines a parameter named `message`. `setTimeout()` is given the string `'Hello, World!'` as an optional argument. After the 2000-millisecond delay, this string is passed to the callback function, resulting in `'Hello, World!'` printing to the console.
