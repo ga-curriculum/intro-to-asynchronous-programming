@@ -24,7 +24,11 @@ In modern JavaScript, many built-in methods return promises, making it easier to
 
 An example is Node's `fs/promises` module, which contains the `readFile()` method we utilized throughout this lecture.
 
-Promises in JavaScript can be *consumed* in various ways, including using `.then()` and `.catch()` for chaining asynchronous operations, `async`/`await` for more modern, readable, and synchronous-style code, or employing `Promise.all()` for executing multiple promises concurrently and handling their results together.
+Promises in JavaScript can be *consumed* in various ways including:
+
+- Using `.then()` and `.catch()` for chaining asynchronous operations.
+- `async`/`await` for more modern, readable, and synchronous-style code.
+- `Promise.all()` for executing multiple promises concurrently and handling their results together.
 
 > 📚 *Consuming a promise* in JavaScript refers to the process of handling the eventual result (either fulfillment or rejection) of a promise.
 
