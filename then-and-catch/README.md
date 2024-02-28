@@ -9,7 +9,7 @@ In JavaScript, `then()` and `catch()` are methods used to handle asynchronous op
 The `then()` method chains to the end of an asynchronous operation, like a `fetch` request. It accepts a callback function that is executed when the asynchronous operation completes. The callback function passed to the `then()` accepts the result of the promise as its input.
 
 ```javascript
-fetch('https://jsonplaceholder.typicode.com/users/1')
+fetch('https://jsonplaceholder.typicode.com/users/4')
   .then((response) => response.json())
   .then((data) => console.log(data));
 ```
@@ -38,7 +38,7 @@ const functionName = async (url) => {
 The `catch()` method can be chained to the end of a `then()`. It accepts a callback function as an argument. This callback function is executed if an error occurs at any point in the chain and receives the error as an argument.
 
 ```javascript
-fetch('https://jsonplaceholder.typicode.com/users/1')
+fetch('https://jsonplaceholder.typicode.com/users/4')
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
