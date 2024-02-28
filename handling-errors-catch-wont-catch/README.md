@@ -2,6 +2,8 @@
 
 **Learning objective:** By the end of this lesson, students will understand the limitations of `try...catch` when making API calls and ways to add custom error handling.
 
+## `catch` doesn't catch all errors
+
 Using `try...catch` with API calls has certain limitations. When making fetch requests in JavaScript, it is helpful to check the `response.ok` property in addition to using a `try...catch` block.
 
 > 🧠 The `response.ok` property returns `true` if the response status is within the range 200–299. This range of numbers indicates that the request was successful.
