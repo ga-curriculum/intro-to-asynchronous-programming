@@ -12,7 +12,7 @@ The `then()` method chains to the end of an asynchronous operation, like a `fetc
 // add a new endpoint
 const commentsApiUrl = 'https://jsonplaceholder.typicode.com/comments/4';
 
-fetch(todosApiUrl)
+fetch(commentsApiUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
 ```
@@ -41,7 +41,7 @@ const functionName = async (url) => {
 The `catch()` method can be chained to the end of a `then()`. It accepts a callback function as an argument. This callback function is executed if an error occurs at any point in the chain and receives the error as an argument.
 
 ```javascript
-fetch(todosApiUrl)
+fetch(commentsApiUrl)
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
