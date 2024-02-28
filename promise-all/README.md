@@ -53,7 +53,7 @@ Because we are passing an array containing two items - `postsPromise` and `todos
 
 How might we use `Promise.all()` to extract the data from our array of responses? As we saw earlier, `Promise.all()` can accept an array of promises as an argument. As a result, the JavaScript `map()` method will be helpful here because it returns a new array containing transformed data.
 
-In this case, we will transform the data by turning each response into a new promise. Again, note we're not awaiting the `json()` method like you're used to seeing, but instead awaiting the `Promise.all()` method. This means we won't wait for one promise to be settled before creating the next one. Instead, we'll start turning each response into a JavaScript object consecutively, and then when all of the responses have been turned into usable objects, we'll move on.
+In this case, we will transform the data by turning each response into a new promise. Again, note we're not awaiting the `json()` method like you're used to seeing, but instead awaiting the `Promise.all()` method. This means we won't wait for one promise to be settled before creating the next one. Instead, we'll start turning each response into a JavaScript object concurrently, and then when all of the responses have been turned into usable objects, we'll move on.
 
 ![Bundled promises](./assets/bundled-promises.png)
 
