@@ -4,7 +4,7 @@
 
 ## What is `Promise.all()`?
 
-`Promise.all()` is a feature in JavaScript for handling multiple promises *simultaneously*. It accepts an array of promises and returns a single promise that resolves when all of the promises in the array have settled.
+`Promise.all()` is a feature in JavaScript for handling multiple promises ***simultaneously***. It accepts an array of promises and returns a single promise that resolves when all of the promises in the array have settled.
 
 ## Why use `Promise.all()`?
 
