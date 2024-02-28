@@ -4,7 +4,7 @@
 
 ## What are `then()` and `catch()`?
 
-In JavaScript, `then()` and `catch()` are methods used to handle asynchronous operations. They provide functionality similar to what you can achieve with `async`/`await` and `try...catch` blocks. In short, `then()` is used for handling the fulfillment of a promise, while `catch()` is used for handling the errors.
+In JavaScript, `then()` and `catch()` are methods used to handle asynchronous operations. They provide functionality similar to what you can achieve with `async`/`await` and `try...catch` blocks. In short, `then()` is used for handling the fulfillment of a promise, while `catch()` is used for handling any errors.
 
 ## `then()`
 
