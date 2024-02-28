@@ -17,7 +17,7 @@ Let's get some practice with error handling in fetch requests. Update your code 
 
 ```javascript
 // Note our endpoint is changing to an invalid endpoint to demonstrate a 404 error!
-const usersApiUrl = 'https://jsonplaceholder.typicode.com/endpoint-that-does-not-exist/';
+const usersApiUrl = 'https://jsonplaceholder.typicode.com/fake-endpoint/';
 
 const getAllUsers = async (url) => {
   try {
