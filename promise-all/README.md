@@ -84,33 +84,14 @@ If we run our code, we should see something like the following print to our cons
 ```javascript
 [
   {
-    id: 4,
-    name: 'Leanne Graham',
-    username: 'Bret',
-    email: 'Sincere@april.biz',
-    address: {
-      street: 'Kulas Light',
-      suite: 'Apt. 556',
-      city: 'Gwenborough',
-      zipcode: '92998-3874',
-      geo: [Object]
-    },
-    phone: '1-770-736-8031 x56442',
-    website: 'hildegard.org',
-    company: {
-      name: 'Romaguera-Crona',
-      catchPhrase: 'Multi-layered client-server neural-net',
-      bs: 'harness real-time e-markets'
-    }
-  },
-  {
     userId: 1,
     id: 4,
-    title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit',
-    body: 'quia et suscipit\n' +
-      'suscipit recusandae consequuntur expedita et cum\n' +
-      'reprehenderit molestiae ut ut quas totam\n' +
-      'nostrum rerum est autem sunt rem eveniet architecto'
-  }
+    title: 'eum et est occaecati',
+    body: 'ullam et saepe reiciendis voluptatem adipisci\n' +
+      'sit amet autem assumenda provident rerum culpa\n' +
+      'quis hic commodi nesciunt rem tenetur doloremque ipsam iure\n' +
+      'quis sunt voluptatem rerum illo velit'
+  },
+  { userId: 1, id: 4, title: 'et porro tempora', completed: true }
 ]
 ```
