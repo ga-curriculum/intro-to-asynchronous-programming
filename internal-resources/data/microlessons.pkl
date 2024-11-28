@@ -52,7 +52,7 @@ promises = new Template.Microlesson {
 }
 
 introToTheFetchApi = new Template.Microlesson {
-  friendlyName = "Intro to the <code>Fetch</code> Api"
+  friendlyName = "Intro to the <code>Fetch</code> API"
   dirName = "intro-to-the-fetch-api"
   type = "Content"
   videoUrl = ""
