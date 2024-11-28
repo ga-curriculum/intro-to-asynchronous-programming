@@ -26,7 +26,7 @@ courses {
       mls.callbacks
       mls.asyncAwait
       mls.errorHandlingWithTryCatch
-      mls.settimeout
+      mls.setTimeout
       mls.promises
       mls.introToTheFetchApi
       mls.promiseAll
@@ -42,7 +42,7 @@ courses {
       mls.callbacks
       mls.asyncAwait
       mls.errorHandlingWithTryCatch
-      (mls.settimeout) {
+      (mls.setTimeout) {
         type = "Level Up content"
       }
       (mls.promises) {

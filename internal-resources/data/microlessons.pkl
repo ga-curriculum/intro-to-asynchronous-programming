@@ -24,21 +24,21 @@ callbacks = new Template.Microlesson {
 }
 
 asyncAwait = new Template.Microlesson {
-  friendlyName = "async/await"
+  friendlyName = "<code>async</code>/<code>await</code>"
   dirName = "async-await"
   type = "Content"
   videoUrl = ""
 }
 
 errorHandlingWithTryCatch = new Template.Microlesson {
-  friendlyName = "Error Handling with try...catch"
+  friendlyName = "Error Handling with <code>try...catch</code>"
   dirName = "error-handling-with-try-catch"
   type = "Content"
   videoUrl = ""
 }
 
-settimeout = new Template.Microlesson {
-  friendlyName = "setTimeout()"
+setTimeout = new Template.Microlesson {
+  friendlyName = "<code>setTimeout()</code>"
   dirName = "settimeout"
   type = "Content"
   videoUrl = ""
@@ -52,28 +52,28 @@ promises = new Template.Microlesson {
 }
 
 introToTheFetchApi = new Template.Microlesson {
-  friendlyName = "Intro to the Fetch Api"
+  friendlyName = "Intro to the <code>Fetch</code> Api"
   dirName = "intro-to-the-fetch-api"
   type = "Content"
   videoUrl = ""
 }
 
 promiseAll = new Template.Microlesson {
-  friendlyName = "Promise.all()"
+  friendlyName = "<code>Promise.all()</code>"
   dirName = "promise-all"
   type = "Content"
   videoUrl = ""
 }
 
 handlingErrorsCatchWontCatch = new Template.Microlesson {
-  friendlyName = "Handling Errors catch Wont Catch"
+  friendlyName = "Handling Errors <code>catch</code> Wont Catch"
   dirName = "handling-errors-catch-wont-catch"
   type = "Content"
   videoUrl = ""
 }
 
 thenAndCatch = new Template.Microlesson {
-  friendlyName = "then() and catch()"
+  friendlyName = "<code>then()</code> and <code>catch()</code>"
   dirName = "then-and-catch"
   type = "Content"
   videoUrl = ""
