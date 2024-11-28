@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - Intro to the Fetch API](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead">Intro to the <code>Fetch</code> Api</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand the basics of the Fetch API in JavaScript and how to make fetch requests.
 

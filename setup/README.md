@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - Setup](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead">Setup</span>
+</h1>
 
 ## Setup
 

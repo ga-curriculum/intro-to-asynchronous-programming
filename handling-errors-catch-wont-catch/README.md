@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - Handing Errors catch Won't Catch](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead">Handling Errors <code>catch</code> Wont Catch</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand the limitations of `try...catch` when making API calls and ways to add custom error handling.
 

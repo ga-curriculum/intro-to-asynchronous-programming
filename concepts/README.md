@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - Concepts](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead">Concepts</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will have a basic understanding of asynchronous programming in JavaScript.
 

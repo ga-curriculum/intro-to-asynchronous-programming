@@ -1,0 +1,81 @@
+import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl" as Template
+
+// Add microlessons here, in the order they should be delivered
+
+setup = new Template.Microlesson {
+  friendlyName = "Setup"
+  dirName = "setup"
+  type = "Content"
+  videoUrl = ""
+}
+
+concepts = new Template.Microlesson {
+  friendlyName = "Concepts"
+  dirName = "concepts"
+  type = "Content"
+  videoUrl = ""
+}
+
+callbacks = new Template.Microlesson {
+  friendlyName = "Callbacks"
+  dirName = "callbacks"
+  type = "Content"
+  videoUrl = ""
+}
+
+asyncAwait = new Template.Microlesson {
+  friendlyName = "async/await"
+  dirName = "async-await"
+  type = "Content"
+  videoUrl = ""
+}
+
+errorHandlingWithTryCatch = new Template.Microlesson {
+  friendlyName = "Error Handling with try...catch"
+  dirName = "error-handling-with-try-catch"
+  type = "Content"
+  videoUrl = ""
+}
+
+settimeout = new Template.Microlesson {
+  friendlyName = "setTimeout()"
+  dirName = "settimeout"
+  type = "Content"
+  videoUrl = ""
+}
+
+promises = new Template.Microlesson {
+  friendlyName = "Promises"
+  dirName = "promises"
+  type = "Content"
+  videoUrl = ""
+}
+
+introToTheFetchApi = new Template.Microlesson {
+  friendlyName = "Intro to the Fetch Api"
+  dirName = "intro-to-the-fetch-api"
+  type = "Content"
+  videoUrl = ""
+}
+
+promiseAll = new Template.Microlesson {
+  friendlyName = "Promise.all()"
+  dirName = "promise-all"
+  type = "Content"
+  videoUrl = ""
+}
+
+handlingErrorsCatchWontCatch = new Template.Microlesson {
+  friendlyName = "Handling Errors catch Wont Catch"
+  dirName = "handling-errors-catch-wont-catch"
+  type = "Content"
+  videoUrl = ""
+}
+
+thenAndCatch = new Template.Microlesson {
+  friendlyName = "then() and catch()"
+  dirName = "then-and-catch"
+  type = "Content"
+  videoUrl = ""
+}
+

@@ -1,0 +1,65 @@
+amends "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl"
+
+import "microlessons.pkl" as mls
+
+// See template.pkl for full configuration options available here.
+
+// After modifying this file, use this command while in the root directory
+// for this project to create the final configuration file (config.json):
+// pkl eval -f json ./internal-resources/data/config.pkl -o %{moduleDir}/%{moduleName}.%{outputFormat}
+
+repo {
+  // This name is shown in the header nav to navigate users home
+  friendlyName = "Intro to Asynchronous Programming"
+  // This must match the repo name as it appears on GitHub exactly
+  name = "intro-to-asynchronous-programming"
+  type = "Lesson"
+}
+
+courses {
+  new {
+    name = "fallback"
+    microlessons {
+      // add microlessons here, in the order they should be delivered
+      mls.setup
+      mls.concepts
+      mls.callbacks
+      mls.asyncAwait
+      mls.errorHandlingWithTryCatch
+      mls.settimeout
+      mls.promises
+      mls.introToTheFetchApi
+      mls.promiseAll
+      mls.handlingErrorsCatchWontCatch
+      mls.thenAndCatch
+    }
+  }
+  new {
+    name = "seb"
+    microlessons {
+      mls.setup
+      mls.concepts
+      mls.callbacks
+      mls.asyncAwait
+      mls.errorHandlingWithTryCatch
+      (mls.settimeout) {
+        type = "Level Up content"
+      }
+      (mls.promises) {
+        type = "Level Up content"
+      }
+      (mls.introToTheFetchApi) {
+        type = "Level Up content"
+      }
+      (mls.promiseAll) {
+        type = "Level Up content"
+      }
+      (mls.handlingErrorsCatchWontCatch) {
+        type = "Level Up content"
+      }
+      (mls.thenAndCatch) {
+        type = "Level Up content"
+      }
+    }
+  }
+}

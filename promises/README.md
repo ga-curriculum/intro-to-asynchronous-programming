@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - Promises](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead">Promises</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will have a basic understanding of JavaScript promises and their application in managing asynchronous operations.
 

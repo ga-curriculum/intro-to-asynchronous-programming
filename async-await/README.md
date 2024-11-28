@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - async/await](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead"><code>async/await</code></span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how the `async`/`await` syntax applies to asynchronous operations in JavaScript.
 

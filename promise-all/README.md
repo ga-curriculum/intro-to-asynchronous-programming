@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - Promise.all()](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead"><code>Promise.all()</code></span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to use `Promise.all()` to handle multiple promises simultaneously.
 

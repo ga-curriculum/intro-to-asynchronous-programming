@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - then() and catch()](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead"><code>then()</code> and <code>catch()</code></span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to apply `then()` and `catch()` to asynchronous operations.
 

@@ -1,4 +1,7 @@
-# ![Intro to Asynchronous Programming - Callbacks](./assets/hero.png)
+<h1>
+  <span class="headline">Intro to Asynchronous Programming</span>
+  <span class="subhead">Callbacks</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to use callback functions to construct asynchronous JavaScript.
 
