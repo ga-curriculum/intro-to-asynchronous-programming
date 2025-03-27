@@ -1,82 +1,83 @@
-<h1>
-  <span class="headline">Intro to Asynchronous Programming</span>
-  <span class="subhead">Error Handling with <code>try...catch</code></span>
-</h1>
+# ![Intro to Asynchronous Programming - Error handling with `try...catch`](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will understand how to use `try...catch` blocks in JavaScript to handle errors in code effectively.
+**Learning objective:** By the end of this lesson, students will understand how to use `try...catch` blocks in JavaScript to handle errors effectively.
 
 ## What is a `try...catch` statement?
 
-The `try...catch` statement provides a way to handle errors that may occur in a block of code without stopping the execution of the entire script.
+The `try...catch` statement lets us handle errors in our code without stopping the entire program.
 
 ### `try`
 
-- In the `try` block, you write the code that might *throw an error*. Think of it as communicating to the app, "Attempt this operation, expecting it might fail."
+- The `try` block contains code that might cause an error. You are telling the program, “Try to run this code — it might not work.”
 
-- If any code within the `try` block throws an `error`, the execution immediately jumps to the `catch` block. The remainder of the code in the `try` block will not run.
+- If an error happens inside the `try` block, the program will immediately move to the `catch` block. Any remaining code in the `try` block will be skipped.
 
-> 📚 *Throwing an error* is a deliberate action in code. It refers to the act of generating an error when something doesn't go as expected. Once an error has been thrown by code in a `try` block, it can be handled with a `catch`.
+> 📚 _Throwing an error_ means the code has detected something went wrong and is stopping that part of the program. When this happens inside a `try` block, the program moves to the `catch` block to handle it.
 
 ### `catch`
 
-- The code inside the `catch` block is executed if an error is thrown within the `try` block.
+- The `catch` block runs **only if** an error happens in the `try` block.
 
-- It receives an `error` object that contains details about what went wrong, allowing you to handle the error, console log it, or provide alternative logic.
+- It receives an `error` object that gives details about what went wrong. You can then log the error, show a message to the user, or do something else to recover from the problem.
 
 ## Anatomy of `try...catch`
 
-Let's take a closer look at the to structure a `try...catch` block.
+Let’s look at how a `try...catch` block is structured:
 
 ![Anatomy of `try...catch`](./assets/try-catch.png)
 
-1. The `try` keyword. The code in the block that follows will run until either an error is thrown or there is no code left to execute.
-2. The code to run. We expect that this code may throw an error.
-3. The `catch` keyword. The code in the block that follows will only run if an error occurrs in the `try` block.
-4. The `error`. Details about the error are held in this object. The properties of this object can vary. You can name this identifier something of your choice (`error`, `err`, or `e` are all common).
-5. The code to run if an error is caught. This can be as little as just console logging the error.
+1. The `try` keyword starts a block of code to run.
+2. Inside the block, we write the code that might cause an error.
+3. The `catch` keyword starts another block that runs **if an error happens**.
+4. The `error` object (also called `err`, `e`, or another name) holds details about what went wrong.
+5. In the `catch` block, we write the code to handle the error.
 
-In this structure, the `try` block can contain any code that might throw an `error` during execution. When an `error` is thrown in the `try` block, it is caught and handled by the `catch` block, allowing an application to continue running.
+The purpose of this structure is to allow our program to keep running, even if something goes wrong.
 
-Visit the [`try...catch` docs on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) for more information on the syntax and use of try and catch.
+👉 You can read more about how `try...catch` works in the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
 
 ## Using `try...catch` in asynchronous functions
 
-So what does `try...catch` have to do with asynchronous behavior?
+Why do we need `try...catch` when working with asynchronous code?
 
-Consider the types of operations we've discussed that typically use asynchronous code, like reading from a disk, querying a database, or calling an API. These actions occur ***outside of the boundaries of our application*** and rely on external resources to function. We can't guarantee the behavior or functionality of those external resources.
+Asynchronous operations (like reading a file, fetching data from a server, or connecting to a database) depend on other systems outside your app. These systems might not work the way you expect — for example, a file might be missing or a server might be offline.
 
-Therefore, asynchronous operations are more error-prone than other operations, so you should typically enclose them inside a `try` block. Take a look at an example of this below:
+Because of this, asynchronous code is more likely to cause errors, so it’s a good idea to use `try...catch` to handle problems safely.
 
-Let's see this in action by trying to read a file that doesn't exist.
+### Example: Reading a file that doesn’t exist
 
 ```javascript
 const readAnotherFile = async () => {
   try {
-    // asynchronous operation reading a file that doesn't exist
+    // This tries to read a file that does not exist
     const data = await fs.readFile('test4.txt', 'utf8');
     console.log(data);
   } catch (error) {
-    // console logging the error lets us see what went wrong
+    // This runs if there is an error (like the file not being found)
     console.log(error);
   }
-}
+};
 
 readAnotherFile();
 ```
 
-- The asynchronous operation `await fs.readFile('test4.txt', 'utf8');` is placed inside the `try` block. If an error occurs during this operation, it will return an `error` with information about what went wrong.
+What’s happening in this code:
 
-- The `catch` block captures any thrown `error`. In this case, our `catch` block prints the `error` to the console, but far more robust error handling could also be included.
+- The `await fs.readFile(...)` line is inside a `try` block because it might fail.
+- If the file does not exist, an error is "thrown" and caught by the `catch` block.
+- The `catch` block logs the error. In a real program, you could also show a message or try another file.
 
-- Using `try...catch` in asynchronous functions can help maintain a positive experience for developers and end users by preventing crashes due to unhandled errors in asynchronous code.
+This way, the program doesn’t crash — it handles the error and keeps running.
 
-Test the code:
+### Run the code
+
+To test it, run the file in your terminal:
 
 ```bash
 node app.js
 ```
 
-When you do, you'll see an error in your console:
+You will see an error message in your console:
 
 ```plaintext
 [Error: ENOENT: no such file or directory, open 'test4.txt'] {
@@ -87,6 +88,6 @@ When you do, you'll see an error in your console:
 }
 ```
 
-Our error was successfully caught and logged!
+That means the file was not found — but instead of crashing, our code caught the error and printed it.
 
-> 🧠 Reading errors can be overwhelming, but typically, you'll find the most straightforward explanations on the first line of an error in the console log, as we see up above - `no such file or directory, open test4.txt`, informing you that there is not a `test4.txt` file.
+> 🧠 Error messages can look complicated, but the **first line usually explains the problem clearly**. In this case, it says: `no such file or directory, open 'test4.txt'` This tells us the file `test4.txt` could not be found.
