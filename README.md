@@ -39,8 +39,8 @@ Some lessons provide more resources for practical application - enhancing studen
 
 ### Course landing pages
 
-- [SEB - Software Engineering Bootcamp](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/intro-to-asynchronous-programming/canvas-landing-pages/seb.html)
-- [Fallback](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/intro-to-asynchronous-programming/canvas-landing-pages/fallback.html)
+- [SEB - Software Engineering Bootcamp](https://ga-curriculum.github.io/intro-to-asynchronous-programming/canvas-landing-pages/seb.html)
+- [Fallback](https://ga-curriculum.github.io/intro-to-asynchronous-programming/canvas-landing-pages/fallback.html)
 
 ### Resources
 
@@ -52,4 +52,4 @@ Some lessons provide more resources for practical application - enhancing studen
 
 ---
 
-**Find a 👾 bug 👾 or have suggestions? [Let us know](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/module-feedback.html)!**
+**Find a 👾 bug 👾 or have suggestions? [Let us know](https://ga-curriculum.github.io/universal-resources-internal/module-feedback.html)!**
